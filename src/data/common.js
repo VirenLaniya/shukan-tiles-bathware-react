@@ -1,6 +1,7 @@
 import logo from '../assets/common/company-logo.png'
 
 export const companyName = 'Shukan'
+export const since = '1960'
 
 export const pages = [{
     path: '/',

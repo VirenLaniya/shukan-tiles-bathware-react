@@ -95,3 +95,17 @@ h1 {
     background: var(--accent);
     bottom: 100px;
   } */
+
+.parallax-h2::after{
+    content: '';
+    margin-top: 16px;
+    display: block;
+    width: 80%;
+    height: 2px;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
+            background-image: -webkit-linear-gradient(180deg, #000, transparent);
+            background-image: -moz-linear-gradient(180deg, #000, transparent);
+            background-image: -o-linear-gradient(180deg, #000, transparent);
+            background-image: linear-gradient(90deg, #000, transparent);
+        } */
+}

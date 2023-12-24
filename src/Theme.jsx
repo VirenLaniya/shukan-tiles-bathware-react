@@ -14,23 +14,36 @@ let Theme = createTheme({
 
   typography: {
     fontFamily: `'Open Sans', 'sans-serif'`,
+    p: {
+      letterSpacing: 1
+    },
+    button: {
+      fontFamily: `'Open Sans', 'sans-serif'`,
+      letterSpacing: 2
+    },
     h1: {
-        fontFamily: `'Raleway', 'sans-serif'`
+        fontFamily: `'Raleway', 'sans-serif'`,
+        letterSpacing: 4
     },
     h2: {
-        fontFamily: `'Raleway', 'sans-serif'`
+        fontFamily: `'Raleway', 'sans-serif'`,
+        letterSpacing: 4
     },
     h3: {
-        fontFamily: `'Raleway', 'sans-serif'`
+        fontFamily: `'Raleway', 'sans-serif'`,
+        letterSpacing: 4
     },
     h4: {
-        fontFamily: `'Raleway', 'sans-serif'`
+        fontFamily: `'Raleway', 'sans-serif'`,
+        letterSpacing: 4
     },
     h5: {
-        fontFamily: `'Raleway', 'sans-serif'`
+        fontFamily: `'Raleway', 'sans-serif'`,
+        letterSpacing: 4
     },
     h6: {
-        fontFamily: `'Raleway', 'sans-serif'`
+        fontFamily: `'Raleway', 'sans-serif'`,
+        letterSpacing: 4
     }
   },
   palette: {

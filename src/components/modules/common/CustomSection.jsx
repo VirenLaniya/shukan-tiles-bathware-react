@@ -4,8 +4,8 @@ import {styled} from '@mui/material/styles'
 
 const CustomSection = ({children, ...other}) => {
     const CustomBox = styled(Box)(({theme})=>({
-        paddingTop: theme.spacing(10),
-        paddingBottom: theme.spacing(10)
+        paddingTop: theme.spacing(12),
+        paddingBottom: theme.spacing(12)
     }))
   return (
     <CustomBox {...other}>

@@ -5,6 +5,10 @@ import image3 from '../assets/images/hero/carousel-images/image3.jpg'
 import introImg from '../assets/images/hero/intro.png'
 import acknowledgementPeopleMeeting from '../assets/images/hero/acknowledgement-people-meeting.jpg'
 
+import creationImage1 from '../assets/images/hero/carousel-images/image1.jpg';
+import creationImage2 from '../assets/images/hero/carousel-images/image2.jpg';
+import creationImage3 from '../assets/images/hero/carousel-images/image3.jpg';
+
 //#region Products Imports
 import agricultureIcon from '../assets/images/hero/products/agriculture.png'
 import biodegradableIcon from '../assets/images/hero/products/biodegradable.png'
@@ -44,6 +48,26 @@ export const introduction = {
     subHeading: "FOR US SOURCING OF MATERIALS IS A MATTER OF TIME...",
     description: "The company excels the skill to source out the products from Indian Market for the clients on right time and from right place. The mission of the company is to set a landmark in service industry an upcoming industry with high potential. A strong base in India Manufacturing Sector, Service Sector and Technology Sector is our strength, which is a key factor to bridge the needs of our overseas clients and Indian Market.",
     introImage: introImg
+}
+//#endregion
+
+//#region Discover Creations
+export const discoverCreations = {
+    title: 'Discover Creations',
+    creations: [
+        {
+            title: 'Kitchen',
+            image: creationImage1
+        },
+        {
+            title: 'Bathware',
+            image: creationImage2
+        },
+        {
+            title: 'Tiles',
+            image: creationImage3
+        }
+    ]
 }
 //#endregion
 

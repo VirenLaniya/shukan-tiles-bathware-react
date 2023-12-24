@@ -16,6 +16,7 @@ import {
 
 //#region Style Imports
 import "./styles/DiscoverDesigns.css";
+import { Button } from "@mui/material";
 //#endregion
 
 function useParallax(value, distance) {
@@ -40,52 +41,84 @@ const ImageTextParallaxAnimation = ({ isImageFirst, imageUrl, text }) => {
                 justifyContent: 'start',
                 alignItems: 'center',
                 scrollSnapAlign: 'center',
-                perspective: '500px'
+                perspective: '400px'
             }}>
-            <Box sx={{
-                position: 'relative',
-                width: '100%'
-            }}>
-                <motion.h2 className='parallax-h2' style={{
-                    y,
-                    position: 'absolute',
-                    width: '100%',
-                    fontSize: theme.typography.h1.fontSize,
-                    fontWeight: '500',
-                    letterSpacing: '4px',
-                    lineHeight: '1.2',
-                    textAlign: 'center',
-                    margin: 0,
-                    color: `${theme.palette.accent.first}`,
-                    textTransform: 'uppercase',
-                }}>{text}</motion.h2>
-            </Box>
-            <Box
-                ref={ref}
-                sx={{
+            {/* <Box sx={{position: 'relative'}}> */}
+                <Box sx={{
                     position: 'relative',
+                    display: {
+                        xs: 'none',
+                        md: 'block'
+                    },
                     width: '100%',
-                    height: '400px',
-                    maxHeight: '90vh',
-                    margin: '10px',
-                    overflow: 'hidden',
-                    order: 2
+                    zIndex: 2,
                 }}>
-                {/* <img src={`https://images.pexels.com/photos/3861943/pexels-photo-3861943.jpeg?auto=compress`} className='parallax-img' alt="A London skyscraper" /> */}
-                <img src={imageUrl}
-                    className='parallax-img'
-                    alt="A London skyscraper"
-                    style={{
+                    <motion.h2 className='parallax-h2' style={{
+                        y,
                         position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
                         width: '100%',
-                        height: '100%',
-                        objectFit: 'cover'
-                    }} />
-            </Box>
+                        fontSize: theme.typography.h1.fontSize,
+                        fontWeight: '500',
+                        letterSpacing: '4px',
+                        lineHeight: '1.2',
+                        textAlign: 'center',
+                        margin: 0,
+                        color: `${theme.palette.accent.first}`,
+                        textTransform: 'uppercase',
+                        backgroundColor: `${theme.palette.secondary.main}`
+                    }}>{text}</motion.h2>
+                </Box>
+
+                <Box sx={{
+                    position: 'absolute',
+                    display: {
+                        xs: 'block',
+                        md: 'none'
+                    },
+                    right: -5,
+                    bottom: '20%',
+                    // transform: 'translate(-100%, -100%)',
+                    px: 5,
+                    py: 2,
+                    zIndex: 2,
+                    backgroundColor: theme.palette.primary.main,
+                    color: theme.palette.secondary.main
+                }}>
+                    {text}
+                </Box>
+
+                <Box
+                    ref={ref}
+                    sx={{
+                        position: {
+                            xs: 'absolute',
+                            md: 'relative'
+                        },
+                        width: '100%',
+                        height: '400px',
+                        maxHeight: '90vh',
+                        // margin: '16px',
+                        overflow: 'hidden',
+                        zIndex: 1
+                    }}
+                >
+                    {/* <img src={`https://images.pexels.com/photos/3861943/pexels-photo-3861943.jpeg?auto=compress`} className='parallax-img' alt="A London skyscraper" /> */}
+                    <img src={imageUrl}
+                        className='parallax-img'
+                        alt="A London skyscraper"
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover'
+                        }} />
+                </Box>
+            {/* </Box> */}
+
         </Box>
     );
 }

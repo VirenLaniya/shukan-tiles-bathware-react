@@ -17,7 +17,7 @@ import FadeRevealAnimation from '../common/FadeRevealAnimation';
 
 //#region Data Imports
 import { introduction } from '../../../data/hero';
-import { companyName, pages, since } from '../../../data/common';
+import { companyName, pages, since, fadeRevealTime } from '../../../data/common';
 //#endregion
 
 const IntroSection = () => {
@@ -29,7 +29,7 @@ const IntroSection = () => {
             <CustomSection>
                 <Grid container spacing={10}>
                     <Grid item xs={12} md={6}>
-                        <FadeRevealAnimation revealTime={0.5}>
+                        <FadeRevealAnimation>
                             <Box sx={{ width: '100%', height: '100%', minHeight: 10 }}>
                                 <img src={introduction.introImage} alt={companyName} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                             </Box>
@@ -37,16 +37,16 @@ const IntroSection = () => {
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Box sx={{ display: 'flex', flexDirection: 'column', rowGap: 5 }}>
-                            <FadeRevealAnimation revealTime={0.8}>
+                            <FadeRevealAnimation>
                                 <UnderlineStyledTitle variant='h3' sx={{ color: theme.palette.primary.main, textTransform: 'uppercase' }}>{companyName}</UnderlineStyledTitle>
                             </FadeRevealAnimation>
                             {/* <FadeRevealAnimation revealTime={1}> */}
                                 <Typography variant='h6' sx={{ color: theme.palette.accent.second, textTransform: 'uppercase' }}>{introduction.subHeading}</Typography>
                             {/* </FadeRevealAnimation> */}
-                            <FadeRevealAnimation revealTime={1.1}>
+                            <FadeRevealAnimation revealTime={fadeRevealTime+0.1}>
                                 <Typography variant='p' sx={{ lineHeight: 2 }}>{introduction.description}</Typography>
                             </FadeRevealAnimation>
-                            <FadeRevealAnimation revealTime={1.2}>
+                            <FadeRevealAnimation revealTime={fadeRevealTime+0.2}>
                                 <Box sx={{ display: 'flex', columnGap: 5, alignItems: 'center' }}>
                                     <Box sx={{ py: 2 }}>
                                         <Link to={pages.filter(page => page.title === 'Product')[0].path}>

@@ -8,6 +8,10 @@ import { Typography, Box, Container } from '@mui/material';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 //#endregion
 
+//#region Component Imports
+import FadeRevealAnimation from '../common/FadeRevealAnimation'
+//#endregion
+
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 
 //#region Data Imports
@@ -29,14 +33,16 @@ const Acknowledgement = () => {
                         gap: 5
                     }}>
                         <FormatQuoteIcon sx={{ color: (theme) => theme.palette.accent.first, fontSize: 64 }} />
-                        <Typography variant='h4' sx={{
-                            color: (theme) => theme.palette.secondary.main,
-                            textTransform: 'uppercase',
-                            textAlign: 'center',
-                            // letterSpacing: '2px'
-                        }}>
-                            {acknowledgement.text}
-                        </Typography>
+                        <FadeRevealAnimation>
+                            <Typography variant='h4' sx={{
+                                color: (theme) => theme.palette.secondary.main,
+                                textTransform: 'uppercase',
+                                textAlign: 'center',
+                                // letterSpacing: '2px'
+                            }}>
+                                {acknowledgement.text}
+                            </Typography>
+                        </FadeRevealAnimation>
                     </Container>
                 </ParallaxBannerLayer>
             </ParallaxBanner>

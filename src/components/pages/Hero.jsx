@@ -9,9 +9,10 @@ import Box from '@mui/material/Box'
 //#region Component Imports
 import LandingSlider from '../modules/hero/LandingSlider'
 import IntroSection from '../modules/hero/IntroSection'
-import DiscoverDesigns from '../modules/hero/DiscoverDesigns'
+// import DiscoverDesigns from '../modules/hero/DiscoverDesigns'
 import DiscoverCreations from '../modules/hero/DiscoverCreations'
 import Acknowledgement from '../modules/hero/Acknowledgement'
+import EffectCoverflowSlider from '../modules/hero/EffectCoverflowSlider'
 // import Products from '../modules/hero/Products'
 // import WhatWeDo from '../modules/hero/WhatWeDo'
 // import Statistics from '../modules/hero/Statistics'
@@ -30,6 +31,7 @@ const Hero = () => {
       {/* <DiscoverDesigns /> */}
       <DiscoverCreations />
       <Acknowledgement />
+      <EffectCoverflowSlider />
       {/* <Products />
       <WhatWeDo />
       <Statistics />

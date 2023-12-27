@@ -14,9 +14,10 @@ const CreationBox = ({ isImageFirst, imageUrl, text }) => {
             sx={{
                 position: 'relative',
                 display: 'flex',
+                height: '400px',
                 flexDirection: isImageFirst ? 'row-reverse' : 'row',
                 justifyContent: 'start',
-                alignItems: 'center'
+                alignItems: 'center',
             }}>
             <Box sx={{
                 display: {
@@ -26,14 +27,18 @@ const CreationBox = ({ isImageFirst, imageUrl, text }) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 width: '100%',
+                height: '100%',
                 zIndex: 2,
+                // outline: '4px transparent',
+                // border: '1px solid',
+                // borderColor: theme.palette.accent.first
             }}>
                 <Typography variant='h3' sx={{
                     width: '100%',
                     fontWeight: '500',
                     lineHeight: '1.2',
                     textAlign: 'center',
-                    color: `${theme.palette.accent.first}`,
+                    color: `${theme.palette.primary.main}`,
                     textTransform: 'uppercase',
                     backgroundColor: `${theme.palette.secondary.main}`
                 }}>{text}</Typography>
@@ -59,7 +64,7 @@ const CreationBox = ({ isImageFirst, imageUrl, text }) => {
             <Box
                 sx={{
                     width: '100%',
-                    height: '400px',
+                    height: '100%',
                     maxHeight: '90vh',
                     // margin: '16px',
                     overflow: 'hidden',

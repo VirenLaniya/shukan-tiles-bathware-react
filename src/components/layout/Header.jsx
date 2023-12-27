@@ -42,6 +42,7 @@ import { pages } from '../../data/common'
 //#endregion
 
 import PropTypes from 'prop-types';
+import ConnectButton from '../modules/common/ConnectButton';
 
 //#region Style Customization
 const CustomNavLink = styled(NavLink)(({ theme }) => ({
@@ -186,6 +187,9 @@ const Header = (props) => {
       {/* </ElevationScroll> */}
       <Toolbar id='back-to-top-anchor' sx={{ height: '90px' }} />
       <MenuDrawer menuDrawerState={menuDrawerState} toggleMenuDrawer={toggleMenuDrawer} />
+      <Box sx={{position: 'fixed', bottom: 32+40, right: 16, zIndex: 9999}}>
+        <ConnectButton />
+      </Box>
       <ScrollTop {...props}>
         <Fab size="small" aria-label="scroll back to top" sx={{ backgroundColor: theme => alpha(theme.palette.common.white, 0.6) }}>
           <KeyboardArrowUpIcon sx={{ color: theme => theme.palette.primary.main }} />

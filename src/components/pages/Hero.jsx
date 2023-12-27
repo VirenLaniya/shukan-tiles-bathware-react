@@ -15,9 +15,9 @@ import Acknowledgement from '../modules/hero/Acknowledgement'
 import EffectCoverflowSlider from '../modules/hero/EffectCoverflowSlider'
 // import Products from '../modules/hero/Products'
 // import WhatWeDo from '../modules/hero/WhatWeDo'
-// import Statistics from '../modules/hero/Statistics'
+import Statistics from '../modules/hero/Statistics'
 // import WhyChooseUs from '../modules/hero/WhyChooseUs'
-// import Testimonials from '../modules/hero/Testimonials'
+import Testimonials from '../modules/hero/Testimonials'
 // import AwardRecognition from '../modules/hero/AwardRecognition'
 //#endregion
 
@@ -33,11 +33,11 @@ const Hero = () => {
       <Acknowledgement />
       <EffectCoverflowSlider />
       {/* <Products />
-      <WhatWeDo />
+      <WhatWeDo /> */}
       <Statistics />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <Testimonials />
-      <AwardRecognition /> */}
+      {/* <AwardRecognition /> */}
     </Box>
   );
 }

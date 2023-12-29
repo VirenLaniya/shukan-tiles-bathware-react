@@ -1,8 +1,49 @@
 import React from 'react'
 
 //#region MUI Imports
-import { Card, CardContent, Typography } from '@mui/material'
+import { Card, CardContent, Typography, Link } from '@mui/material'
+import { styled } from '@mui/material/styles'
 //#endregion
+
+const CustomLink = styled(Link)(({ theme }) => ({
+    display: 'block',
+    color: theme.palette.text.secondary,
+    ':hover': {
+        color: theme.palette.secondary.main
+    }
+}))
+
+const ContactItemContent = ({ contactItem, contactType }) => {
+    switch (contactType) {
+        case "email":
+            const emailLink = `mailto:${contactItem}`
+            return (
+                <CustomLink href={emailLink} underline="none">
+                    {contactItem}
+                </CustomLink>
+            )
+        case "mobile":
+            const mobileLink = `tel:${contactItem}`
+            return (
+                <CustomLink href={mobileLink} underline="none">
+                    {contactItem}
+                </CustomLink>
+            )
+        case "website":
+            const webLink = contactItem.substr(0, 8) === 'https://' ? contactItem : 'https://' + contactItem
+            return (
+                <CustomLink href={webLink} underline="none" target='_blank'>
+                    {contactItem}
+                </CustomLink>
+            )
+        default:
+            return (
+                <Typography color="text.secondary" sx={{ lineHeight: 2 }}>
+                    {contactItem}
+                </Typography>
+            )
+    }
+}
 
 const ContactDetailCard = ({ children, contact }) => {
     return (
@@ -31,18 +72,14 @@ const ContactDetailCard = ({ children, contact }) => {
                 /> */}
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" sx={{ letterSpacing: 3, display: 'flex', alignItems: 'center' }}>
-                    <contact.icon sx={{mr: 1}} /> {contact.title}
+                    <contact.icon sx={{ mr: 1 }} /> {contact.title}
                 </Typography>
                 {
                     contact.content.map((item, index) => {
-                        return (
-                            <Typography key={index} variant="body2" color="text.secondary" sx={{ lineHeight: 2 }}>
-                                {item}
-                            </Typography>
-                        )
+                        return <ContactItemContent contactItem={item} contactType={contact.type} key={index} />
+                        // return contactItemContent(item, contact.type)
                     })
                 }
-
             </CardContent>
         </Card>
     )

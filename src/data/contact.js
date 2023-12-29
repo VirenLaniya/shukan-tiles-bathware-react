@@ -18,21 +18,25 @@ export const contactInformation = {
         {
             title: 'Address',
             content: ['501, Aaryan Workspaces, ST.Xaviers College Corner, Hotel Klassic Gold Road, Navrangpura, Ahmedabad - 380009.'],
+            type: 'address',
             icon: LocationCityRoundedIcon
         },
         {
             title: "Let's Talk",
-            content: ['+91 7990314127', '+91 9824012686', '91 79 26466690/26402270'],
+            content: ['+91 1234567890', '+91 1237894560', '+91 1597538246'],
+            type: 'mobile',
             icon: HeadsetMicRoundedIcon
         },
         {
             title: 'Website',
-            content: ['www.mittal-exports.com', 'www.hmssgroup.com'],
+            content: ['www.google.com', 'www.facebook.com'],
+            type: 'website',
             icon: LanguageRoundedIcon
         },
         {
             title: 'Email',
-            content: ['romesh@hmssgroup.com', 'marketing1@mittal-exports.com'],
+            content: ['virenlaniya.developer@gmail.com', 'virenlaniya.developer@gmail.com'],
+            type: 'email',
             icon: EmailRoundedIcon
         }
     ]

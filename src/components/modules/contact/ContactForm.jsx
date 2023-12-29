@@ -24,10 +24,10 @@ const ContactForm = () => {
       <FadeRevealAnimation>
         <SectionTitle title={contactForm.title} />
       </FadeRevealAnimation>
-      <Container>
+      <Container maxWidth='md'>
         {/* <TextField variant='outlined' type='text' label="Something" /> */}
         <FadeRevealAnimation>
-          <Box sx={{ px: 25 }}>
+          <Box>
             <Grid container spacing={4}>
               <Grid item xs={12} md={6}>
                 <CustomTextField variant='filled' type='text' label="Something" />

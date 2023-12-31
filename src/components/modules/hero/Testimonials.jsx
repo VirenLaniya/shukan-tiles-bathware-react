@@ -20,6 +20,7 @@ import { mod } from 'react-swipeable-views-core'
 
 //#region Component Imports
 import CustomSection from '../common/CustomSection';
+import FadeRevealAnimation from '../common/FadeRevealAnimation';
 //#endregion
 
 //#region Data Imports
@@ -122,25 +123,27 @@ const Testimonials = () => {
             {/* <ParallaxBannerLayer style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', height: '100%' }}> */}
             <Box>
                 <Container sx={{ height: '100%' }}>
-                    <Box sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'end', justifyContent: 'center' }}>
-                        <TestimonialSlider
-                            testimonials={testimonials}
-                            index={index}
-                            handleChangeIndex={handleChangeIndex}
-                        />
-                        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'end', columnGap: 2 }}>
-                            <NavButton
-                                onClick={() => handleChangeIndex(index - 1)}
-                            >
-                                <ChevronLeftRoundedIcon />
-                            </NavButton>
-                            <NavButton
-                                onClick={() => handleChangeIndex(index + 1)}
-                            >
-                                <ChevronRightRoundedIcon />
-                            </NavButton>
+                    <FadeRevealAnimation>
+                        <Box sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'end', justifyContent: 'center' }}>
+                            <TestimonialSlider
+                                testimonials={testimonials}
+                                index={index}
+                                handleChangeIndex={handleChangeIndex}
+                            />
+                            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'end', columnGap: 2 }}>
+                                <NavButton
+                                    onClick={() => handleChangeIndex(index - 1)}
+                                >
+                                    <ChevronLeftRoundedIcon />
+                                </NavButton>
+                                <NavButton
+                                    onClick={() => handleChangeIndex(index + 1)}
+                                >
+                                    <ChevronRightRoundedIcon />
+                                </NavButton>
+                            </Box>
                         </Box>
-                    </Box>
+                    </FadeRevealAnimation>
                 </Container>
             </Box>
             {/* </ParallaxBannerLayer> */}

@@ -46,6 +46,7 @@ let Theme = createTheme({
         letterSpacing: 4
     }
   },
+
   palette: {
     primary: {
       main: primaryMainColor,
@@ -63,8 +64,63 @@ let Theme = createTheme({
     //   paper: backgroundColor
     // }
   },
+
   components: {
     MuiButton: {
+      styleOverrides: {
+        sizeSmall: {
+          paddingTop: 8,
+          paddingBottom: 8,
+          paddingLeft: 20,
+          paddingRight: 20
+        },
+        sizeMedium: {
+          paddingTop: 12,
+          paddingBottom: 12,
+          paddingLeft: 30,
+          paddingRight: 30,
+          fontSize: 16
+        },
+        sizeLarge: {
+          paddingTop: 16,
+          paddingBottom: 16,
+          paddingLeft: 40,
+          paddingRight: 40,
+          fontSize: 17
+        },
+        root: {
+          borderRadius: 0
+        },
+        containedPrimary: {
+          position: 'relative',
+          ':hover': {
+            color: 'white',
+            backgroundColor: accentSecondColor,
+          },
+          // '::before': {
+          //   content: "''",
+          //   display: 'block',
+          //   position: 'absolute',
+          //   top: 0,
+          //   left: 0,
+          //   width: '100%',
+          //   height: 0,
+          //   backgroundColor: accentSecondColor,
+          //   transition: 'all .5s',
+          //   mixBlendMode: 'difference'
+          // },
+          // ':hover::before': {
+          //   height: '100%'
+          // }
+        },
+        outlinedPrimary: {
+          borderWidth: 2,
+          ':hover': {
+            borderWidth: 2
+          }
+        }
+      },
+
       variants: [
         {
           props: { variant: 'primary' },

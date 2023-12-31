@@ -5,13 +5,15 @@ import { Typography, Box, Container, useTheme } from '@mui/material';
 import { statistics } from '../../../data/hero';
 import CountAccelerateEffect from '../common/CountAccelerateEffect'
 import ShootingStarLineDivider from '../common/ShootingStarLineDivider'
+import CustomSection from '../common/CustomSection';
 
 const Statistics = () => {
 
     const theme = useTheme();
 
     return (
-        <Box sx={{ height: { xs:'650px', md: '400px'} }}>
+        // <Box sx={{ height: { xs:'650px', md: '400px'} }}>
+        <CustomSection>
             <ParallaxBanner style={{ height: '100%' }}>
                 <ParallaxBannerLayer image={statistics.backgroundImage} speed={-25} />
                 <ParallaxBannerLayer style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', height: '100%' }}>
@@ -46,7 +48,8 @@ const Statistics = () => {
                     </Container>
                 </ParallaxBannerLayer>
             </ParallaxBanner>
-        </Box>
+        {/* </Box> */}
+        </CustomSection>
     )
 }
 

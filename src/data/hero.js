@@ -2,7 +2,7 @@ import image1 from '../assets/images/hero/carousel-images/image1.jpg'
 import image2 from '../assets/images/hero/carousel-images/image2.jpg'
 import image3 from '../assets/images/hero/carousel-images/image3.jpg'
 
-import introImg from '../assets/images/hero/intro.png'
+import heroIntroImg from '../assets/images/hero/hero-intro.jpg'
 import acknowledgementPeopleMeeting from '../assets/images/hero/acknowledgement-people-meeting.jpg'
 
 import creationImage1 from '../assets/images/hero/carousel-images/image1.jpg';
@@ -18,6 +18,13 @@ import lozengeIcon from '../assets/images/hero/products/lozenge.png'
 import textileIcon from '../assets/images/hero/products/textile.png'
 //#endregion
 
+//#region Design Imports
+import design1 from '../assets/images/hero/designs/design1.jpg'
+import design2 from '../assets/images/hero/designs/design2.jpg'
+import design3 from '../assets/images/hero/designs/design3.jpg'
+import design4 from '../assets/images/hero/designs/design4.jpg'
+//#endregion
+
 //#region What we do Imports
 import whatWeDoImg from '../assets/images/hero/what-we-do.jpg'
 //#endregion
@@ -25,29 +32,35 @@ import whatWeDoImg from '../assets/images/hero/what-we-do.jpg'
 //#region Hero Landing Carousel(Slider)
 
 export const landingSlider = [{
-    title: 'Anonymous Exports',
+    title: 'Shukan',
     description: 'Welcome to',
     image: image1,
     buttonText: 'Discover More',
     buttonLink: '/about'    
 }, {
-    title: 'Slide 2',
-    description: 'Description for Slide 2',
+    title: 'Every Space',
+    description: 'Elegance for',
     image: image2,
 }, {
-    title: 'Slide 3',
-    description: 'Description for Slide 3',
+    title: 'Exquisite Designs',
+    description: 'Elevate your daily routine with our',
     image: image3,
 }];
 
 //#endregion
 
 //#region Intro
+// export const introduction = {
+//     heading: "Anonymous Exports",
+//     subHeading: "FOR US SOURCING OF MATERIALS IS A MATTER OF TIME...",
+//     description: "The company excels the skill to source out the products from Indian Market for the clients on right time and from right place. The mission of the company is to set a landmark in service industry an upcoming industry with high potential. A strong base in India Manufacturing Sector, Service Sector and Technology Sector is our strength, which is a key factor to bridge the needs of our overseas clients and Indian Market.",
+//     introImage: introImg
+// }
 export const introduction = {
-    heading: "Anonymous Exports",
+    heading: "We stands for Design, Quality and Culture.",
     subHeading: "FOR US SOURCING OF MATERIALS IS A MATTER OF TIME...",
     description: "The company excels the skill to source out the products from Indian Market for the clients on right time and from right place. The mission of the company is to set a landmark in service industry an upcoming industry with high potential. A strong base in India Manufacturing Sector, Service Sector and Technology Sector is our strength, which is a key factor to bridge the needs of our overseas clients and Indian Market.",
-    introImage: introImg
+    introImage: heroIntroImg
 }
 //#endregion
 
@@ -80,15 +93,14 @@ export const acknowledgement = {
 
 //#region Designs
 export const designs = [
-    'https://swiperjs.com/demos/images/nature-1.jpg',
-    'https://swiperjs.com/demos/images/nature-2.jpg',
-    'https://swiperjs.com/demos/images/nature-3.jpg',
-    'https://swiperjs.com/demos/images/nature-4.jpg',
-    'https://swiperjs.com/demos/images/nature-5.jpg',
-    'https://swiperjs.com/demos/images/nature-6.jpg',
-    'https://swiperjs.com/demos/images/nature-7.jpg',
-    'https://swiperjs.com/demos/images/nature-8.jpg',
-    'https://swiperjs.com/demos/images/nature-9.jpg',
+    design1,
+    design2,
+    design3,
+    design4,
+    design1,
+    design2,
+    design3,
+    design4
 ]
 //#endregion
 

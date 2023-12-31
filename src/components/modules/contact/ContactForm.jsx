@@ -45,8 +45,9 @@ const ContactForm = () => {
                 <CustomTextField variant='filled' type='text' multiline rows={4} label="Something" />
               </Grid>
               <Grid item xs={12}>
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                  <Button variant='primary' size='large' sx={{ px: 5 }}>Submit</Button>
+                <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
+                  <Button variant='contained' size='medium'>Submit</Button>
+                  <Button variant='outlined' size='medium'>Reset</Button>
                 </Box>
               </Grid>
             </Grid>

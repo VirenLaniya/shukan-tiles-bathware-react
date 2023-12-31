@@ -13,11 +13,13 @@ import { useTheme } from '@mui/material/styles';
 import CustomSection from '../common/CustomSection';
 import UnderlineStyledTitle from '../common/UnderlineStyledTitle';
 import FadeRevealAnimation from '../common/FadeRevealAnimation';
+import SectionParagraph from '../common/SectionParagraph';
 //#endregion
 
 //#region Data Imports
 import { introduction } from '../../../data/hero';
 import { companyName, pages, since, fadeRevealTime } from '../../../data/common';
+import { madeInIndia } from '../../../data/about';
 //#endregion
 
 const IntroSection = () => {
@@ -44,14 +46,12 @@ const IntroSection = () => {
                                 <Typography variant='h6' sx={{ color: theme.palette.accent.second, textTransform: 'uppercase' }}>{introduction.subHeading}</Typography>
                             {/* </FadeRevealAnimation> */}
                             <FadeRevealAnimation revealTime={fadeRevealTime+0.1}>
-                                <Typography variant='p' sx={{ lineHeight: 2 }}>{introduction.description}</Typography>
+                                <SectionParagraph>{introduction.description}</SectionParagraph>
                             </FadeRevealAnimation>
                             <FadeRevealAnimation revealTime={fadeRevealTime+0.2}>
                                 <Box sx={{ display: 'flex', columnGap: 5, alignItems: 'center' }}>
                                     <Box sx={{ py: 2 }}>
-                                        <Link to={pages.filter(page => page.title === 'Product')[0].path}>
-                                            <Button variant='primary' sx={{ px: 4, py: 2, fontSize: '16px' }}>Discover More</Button>
-                                        </Link>
+                                        <img src={madeInIndia.symbol} alt='Make In India' style={{width: '25%', height: 'auto', objectFit: 'contain'}} />
                                     </Box>
                                     <Divider orientation="vertical" flexItem sx={{
                                         backgroundColor: theme.palette.accent.second,

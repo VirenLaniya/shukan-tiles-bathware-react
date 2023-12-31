@@ -9,6 +9,7 @@ import Box from '@mui/material/Box'
 //#region Component Imports
 import LandingSlider from '../modules/hero/LandingSlider'
 import IntroSection from '../modules/hero/IntroSection'
+import Introduction from '../modules/hero/Introduction'
 // import DiscoverDesigns from '../modules/hero/DiscoverDesigns'
 import DiscoverCreations from '../modules/hero/DiscoverCreations'
 import Acknowledgement from '../modules/hero/Acknowledgement'
@@ -27,7 +28,8 @@ const Hero = () => {
   return (
     <Box>
       <LandingSlider />
-      <IntroSection />
+      {/* <IntroSection /> */}
+      <Introduction />
       {/* <DiscoverDesigns /> */}
       <DiscoverCreations />
       <Acknowledgement />

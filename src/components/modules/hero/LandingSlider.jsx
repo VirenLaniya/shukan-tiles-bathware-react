@@ -58,7 +58,7 @@ const LandingSlider = () => {
                                 position: 'relative',
                             }}>
                                 <Card sx={{
-                                    px: {xs: 4, md: 10},
+                                    px: {xs: 1, md: 10},
                                     display: 'flex',
                                     alignItems: 'center',
                                     textAlign: 'left',

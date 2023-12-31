@@ -13,7 +13,7 @@ const PageStarterSection = ({ children, sx, bgImage, title, ...others }) => {
             height: '45vh',
             ...sx
         }} {...others}>
-            <Box sx={{width: '100%', height: '100%', backgroundColor: `rgb(0 0 0 / 0.6)`}}>
+            <Box sx={{ width: '100%', height: '100%', backgroundColor: `rgb(0 0 0 / 0.6)` }}>
                 <Container sx={{
                     display: 'flex',
                     alignItems: 'center',
@@ -21,7 +21,7 @@ const PageStarterSection = ({ children, sx, bgImage, title, ...others }) => {
                     width: '100%',
                     height: '100%'
                 }}>
-                    <NoiseGlitchText text={title} sx={{fontSize: '48px', textTransform: 'uppercase'}} />
+                    <NoiseGlitchText text={title} sx={{ fontSize: '48px', textTransform: 'uppercase' }} />
                 </Container>
             </Box>
         </Box>

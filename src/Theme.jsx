@@ -209,9 +209,9 @@ let Theme = createTheme({
       styleOverrides: {
         root: {
           overflow: 'hidden',
-          borderRadius: '8px',
+          borderRadius: 0,
           // backgroundColor: '#F3F6F9',
-          backgroundColor: secondaryMainColor,
+          // backgroundColor: secondaryMainColor,
           border: '1px solid',
           borderColor: 'transparent',
           transition: defaultTheme.transitions.create([

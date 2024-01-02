@@ -20,7 +20,7 @@ import { alpha, styled, useTheme } from '@mui/material/styles';
 //#endregion
 
 //#region MUI Icons Imports
-import AccountTreeRoundedIcon from '@mui/icons-material/AccountTreeRounded';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUpRounded'
 //#endregion
@@ -31,6 +31,7 @@ import companyLogo from '../../assets/common/company-logo.png'
 
 //#region Component Imports
 import MenuDrawer from './MenuDrawer';
+import SearchDrawer from './SearchDrawer';
 //#endregion
 
 //#region Style Imports
@@ -132,6 +133,7 @@ const Header = (props) => {
 
   const theme = useTheme();
   const [menuDrawerState, setMenuDrawerState] = React.useState(false);
+  const [searchDrawerState, setSearchDrawerState] = React.useState(false);
 
   const toggleMenuDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -139,6 +141,14 @@ const Header = (props) => {
     }
 
     setMenuDrawerState(open);
+  };
+
+  const toggleSearchDrawer = (open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setSearchDrawerState(open);
   };
 
   return (
@@ -162,8 +172,8 @@ const Header = (props) => {
                 </IconButton>
               </Box>
 
-              <Box sx={{ display: 'flex', mr: 1 }}>
-                <img src={companyLogo} alt='Company' style={{ maxWidth: '150px', height: 'auto', objectFit: 'contain' }} />
+              <Box sx={{ display: 'flex', mr: 1, width: { xs: '128px', md: '150px' } }}>
+                <img src={companyLogo} alt='Company' style={{ maxWidth: '150px', width: '100%', height: 'auto', objectFit: 'contain' }} />
               </Box>
 
               <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', columnGap: '24px' }}>
@@ -173,12 +183,10 @@ const Header = (props) => {
               </Box>
 
               <Box>
-                <Button sx={{ display: { xs: 'none', md: 'flex' } }} variant="secondary" startIcon={<AccountTreeRoundedIcon />}>
-                  Connect
-                </Button>
-                <IconButton sx={{ display: { xs: 'flex', md: 'none' } }} color="secondary" size='large'>
-                  <AccountTreeRoundedIcon fontSize='inherit' />
+                <IconButton sx={{ display: 'flex', color: theme.palette.primary.contrastText }} size='large' onClick={toggleSearchDrawer(true)}>
+                  <SearchRoundedIcon fontSize='inherit' />
                 </IconButton>
+                <SearchDrawer toggleSearchDrawer={toggleSearchDrawer} searchDrawerState={searchDrawerState} />
               </Box>
             </Toolbar>
           </Container>
@@ -187,7 +195,7 @@ const Header = (props) => {
       {/* </ElevationScroll> */}
       <Toolbar id='back-to-top-anchor' sx={{ height: '90px' }} />
       <MenuDrawer menuDrawerState={menuDrawerState} toggleMenuDrawer={toggleMenuDrawer} />
-      <Box sx={{position: 'fixed', bottom: 32+40, right: 16, zIndex: 9999}}>
+      <Box sx={{ position: 'fixed', bottom: 32 + 40, right: 16, zIndex: 9999 }}>
         <ConnectButton />
       </Box>
       <ScrollTop {...props}>

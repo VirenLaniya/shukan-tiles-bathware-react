@@ -1,7 +1,8 @@
-import logo from '../assets/common/company-logo.png'
+import logo from '/assets/common/company-logo.png'
 
 export const companyName = 'Shukan'
 export const since = '1960'
+export const companyLogo = logo
 export const fadeRevealTime = 0.4
 
 export const pages = [{

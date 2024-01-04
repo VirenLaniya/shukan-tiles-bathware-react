@@ -1,32 +1,32 @@
-import image1 from '../assets/images/hero/carousel-images/image1.jpg'
-import image2 from '../assets/images/hero/carousel-images/image2.jpg'
-import image3 from '../assets/images/hero/carousel-images/image3.jpg'
+import image1 from '/assets/images/hero/carousel-images/image1.jpg'
+import image2 from '/assets/images/hero/carousel-images/image2.jpg'
+import image3 from '/assets/images/hero/carousel-images/image3.jpg'
 
-import heroIntroImg from '../assets/images/hero/hero-intro.jpg'
-import acknowledgementPeopleMeeting from '../assets/images/hero/acknowledgement-people-meeting.jpg'
+import heroIntroImg from '/assets/images/hero/hero-intro.jpg'
+import acknowledgementPeopleMeeting from '/assets/images/hero/acknowledgement-people-meeting.jpg'
 
-import creationImage1 from '../assets/images/hero/carousel-images/image1.jpg';
-import creationImage2 from '../assets/images/hero/carousel-images/image2.jpg';
-import creationImage3 from '../assets/images/hero/carousel-images/image3.jpg';
+import creationImage1 from '/assets/images/hero/carousel-images/image1.jpg';
+import creationImage2 from '/assets/images/hero/carousel-images/image2.jpg';
+import creationImage3 from '/assets/images/hero/carousel-images/image3.jpg';
 
 //#region Products Imports
-import agricultureIcon from '../assets/images/hero/products/agriculture.png'
-import biodegradableIcon from '../assets/images/hero/products/biodegradable.png'
-import chemicalsIcon from '../assets/images/hero/products/chemicals.png'
-import garpheneIcon from '../assets/images/hero/products/garphene.png'
-import lozengeIcon from '../assets/images/hero/products/lozenge.png'
-import textileIcon from '../assets/images/hero/products/textile.png'
+import agricultureIcon from '/assets/images/hero/products/agriculture.png'
+import biodegradableIcon from '/assets/images/hero/products/biodegradable.png'
+import chemicalsIcon from '/assets/images/hero/products/chemicals.png'
+import garpheneIcon from '/assets/images/hero/products/garphene.png'
+import lozengeIcon from '/assets/images/hero/products/lozenge.png'
+import textileIcon from '/assets/images/hero/products/textile.png'
 //#endregion
 
 //#region Design Imports
-import design1 from '../assets/images/hero/designs/design1.jpg'
-import design2 from '../assets/images/hero/designs/design2.jpg'
-import design3 from '../assets/images/hero/designs/design3.jpg'
-import design4 from '../assets/images/hero/designs/design4.jpg'
+import design1 from '/assets/images/hero/designs/design1.jpg'
+import design2 from '/assets/images/hero/designs/design2.jpg'
+import design3 from '/assets/images/hero/designs/design3.jpg'
+import design4 from '/assets/images/hero/designs/design4.jpg'
 //#endregion
 
 //#region What we do Imports
-import whatWeDoImg from '../assets/images/hero/what-we-do.jpg'
+import whatWeDoImg from '/assets/images/hero/what-we-do.jpg'
 //#endregion
 
 //#region Hero Landing Carousel(Slider)

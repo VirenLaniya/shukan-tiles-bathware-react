@@ -1,4 +1,4 @@
-import background from '../assets/images/contact/contact.jpeg'
+import background from '/assets/images/contact/contact.jpeg'
 
 //#region Contact Information Imports
 import LocationCityRoundedIcon from '@mui/icons-material/LocationCityRounded';

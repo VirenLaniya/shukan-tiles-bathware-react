@@ -26,7 +26,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUpRounded'
 //#endregion
 
 //#region Local Asset Imports
-import companyLogo from '../../assets/common/company-logo.png'
+import { companyLogo } from '../../data/common';
 //#endregion
 
 //#region Component Imports

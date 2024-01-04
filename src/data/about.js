@@ -1,14 +1,14 @@
 // import background from '../assets/images/about/shukan-red.jpg'
-import background from '../assets/images/about/about-us.jpg'
-import aboutIntroImg from '../assets/images/about/about-intro.jpeg'
-import madeInIndiaImg from '../assets/images/about/made-in-india.jpg'
-import makeInIndiaSymbol from '../assets/images/about/make-in-india.png'
-import cmdDirectorPicture from '../assets/images/about/cmd-director-picture.jpg'
+import background from '/assets/images/about/about-us.jpg'
+import aboutIntroImg from '/assets/images/about/about-intro.jpeg'
+import madeInIndiaImg from '/assets/images/about/made-in-india.jpg'
+import makeInIndiaSymbol from '/assets/images/about/make-in-india.png'
+import cmdDirectorPicture from '/assets/images/about/cmd-director-picture.jpg'
 
 //#region Fundamentals Imports
-import design from '../assets/images/about/fundamentals/design.png'
-import quality from '../assets/images/about/fundamentals/quality.png'
-import culture from '../assets/images/about/fundamentals/culture.png'
+import design from '/assets/images/about/fundamentals/design.png'
+import quality from '/assets/images/about/fundamentals/quality.png'
+import culture from '/assets/images/about/fundamentals/culture.png'
 //#endregion
 
 export const pageStarter = {

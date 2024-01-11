@@ -13,22 +13,27 @@ import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 //#endregion
 
+//#region Component Imports
+import SearchResult from './SearchResult';
+//#endregion
+
 export default function SearchDrawer({ toggleSearchDrawer, searchDrawerState }) {
 
     const theme = useTheme();
 
     const searchContainer = () => (
         <Box
-            sx={{ width: 'auto', pt: theme.spacing(6), pb: theme.spacing(12) }}
+            sx={{ width: 'auto', pt: theme.spacing(6), pb: theme.spacing(12), boxSizing: 'border-box', height: '100vh', overflow: 'hidden' }}
             role="presentation"
         >
+            {/* Search Container */}
             <Container maxWidth='sm'>
                 <Box sx={{ pb: theme.spacing(6), display: 'flex', justifyContent: 'flex-end' }}>
                     <IconButton onClick={toggleSearchDrawer(false)}>
                         <CloseRoundedIcon />
                     </IconButton>
                 </Box>
-                <Box sx={{ display: 'flex', alignItems: 'stretch', gap: 1 }}>
+                <Box sx={{ pb: theme.spacing(6), display: 'flex', alignItems: 'stretch', gap: 1 }}>
                     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', p: 2, backgroundColor: theme.palette.primary.main }}>
                         <SearchRoundedIcon sx={{ color: theme.palette.primary.contrastText }} />
                     </Box>
@@ -39,6 +44,9 @@ export default function SearchDrawer({ toggleSearchDrawer, searchDrawerState }) 
                         fullWidth />
                 </Box>
             </Container>
+            
+            <SearchResult />
+            
         </Box>
     );
 

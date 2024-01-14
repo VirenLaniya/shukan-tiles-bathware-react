@@ -40,7 +40,7 @@ const NavButton = styled(IconButton)(({ theme }) => ({
     color: theme.palette.primary.main,
     ':hover': {
         backgroundColor: theme.palette.primary.main,
-        color: theme.palette.secondary.main
+        color: theme.palette.primary.contrastText
     }
 }))
 

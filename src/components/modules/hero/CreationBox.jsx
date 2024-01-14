@@ -29,11 +29,11 @@ const CreationBox = ({ isImageFirst, imageUrl, text }) => {
                 width: '100%',
                 height: '100%',
                 zIndex: 2,
-                backgroundColor: theme.palette.common.white
+                backgroundColor: theme.palette.background.paper
                 // backgroundColor: theme.palette.primary.main
                 // outline: '4px transparent',
                 // border: '1px solid',
-                // borderColor: theme.palette.accent.first
+                // borderColor: theme.palette.secondary.main
             }}>
                 {/* <Box sx={{ padding: 2, width: '100%', height: '100%', backgroundColor: theme.palette.common.white}}> */}
                     <Typography variant='h3' sx={{

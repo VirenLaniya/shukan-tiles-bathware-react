@@ -40,7 +40,7 @@ export default function DiscoverDesigns() {
     });
 
     return (
-        <CustomSection sx={{ backgroundColor: theme => theme.palette.secondary.main }}>
+        <CustomSection sx={{ backgroundColor: theme => theme.palette.secondary.light }}>
             <Container>
                 <FadeRevealAnimation>
                     <SectionTitle title={discoverCreations.title} />

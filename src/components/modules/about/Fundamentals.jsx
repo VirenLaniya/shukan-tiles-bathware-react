@@ -20,7 +20,7 @@ const Fundamentals = () => {
     const theme = useTheme();
 
     return (
-        <CustomSection sx={{ backgroundColor: theme.palette.secondary.main }}>
+        <CustomSection sx={{ backgroundColor: theme.palette.background.paper }}>
             <Container sx={{
                 // py: 10,
                 display: 'flex',

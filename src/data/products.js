@@ -10,7 +10,7 @@ export const products = [
         image: design1
     },
     {
-        name: "Ritz Wall Hung Basin",
+        name: "Ritz Wall Hung Basin dsds dds dsds dsds ",
         description: `A set of 60 hand-crafted, high quality tiles in`,
         image: design2
     },

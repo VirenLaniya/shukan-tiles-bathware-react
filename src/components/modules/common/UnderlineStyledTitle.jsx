@@ -32,7 +32,7 @@ const UnderlineStyledTitle = (props) => {
         content: '""',
         display: 'block',
         height: 3,
-        backgroundColor: theme.palette.accent.second,
+        backgroundColor: theme.palette.primary.light,
         borderRadius: 8,
         width: isInView ? theme.spacing(textLength * 2) : 0,
         marginTop: 2,

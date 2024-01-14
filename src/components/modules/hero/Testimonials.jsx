@@ -32,11 +32,11 @@ const EnhancedSwipeableViews = virtualize(SwipeableViews);
 
 //#region Style Customization
 const NavButton = styled(IconButton)(({ theme }) => ({
-    border: `2px solid ${theme.palette.accent.first}`,
-    color: theme.palette.accent.first,
+    border: `2px solid ${theme.palette.primary.main}`,
+    color: theme.palette.primary.main,
     ':hover': {
-        backgroundColor: theme.palette.accent.first,
-        color: theme.palette.secondary.main
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.background.paper
     }
 }))
 //#endregion
@@ -46,7 +46,7 @@ const Testimonial = ({ testimonial }) => {
     return (
         <Box className="testimonial">
             <Typography variant='body1' sx={{ fontSize: { xs: 20, md: 28 }, color: (theme) => theme.palette.primary.main, letterSpacing: 2 }}>{testimonial.text}</Typography>
-            <Typography variant='h6' sx={{ mt: 4, color: (theme) => theme.palette.accent.first, letterSpacing: 2 }}>- {testimonial.author}</Typography>
+            <Typography variant='h6' sx={{ mt: 4, color: (theme) => theme.palette.secondary.main, letterSpacing: 2 }}>- {testimonial.author}</Typography>
         </Box>
     );
 };
@@ -83,7 +83,7 @@ function slideRenderer(params) {
 const TestimonialSlider = ({ testimonials, index, handleChangeIndex }) => {
     return (
         <Box className="testimonial-slider" sx={{ padding: 4, width: '100%', position: 'relative' }}>
-            <FormatQuoteRoundedIcon sx={{ position: 'absolute', color: (theme) => alpha(theme.palette.accent.first, 0.3), fontSize: 128, top: '-15%', left: '-2%' }} />
+            <FormatQuoteRoundedIcon sx={{ position: 'absolute', color: (theme) => alpha(theme.palette.secondary.main, 0.3), fontSize: 128, top: '-15%', left: '-2%' }} />
             <EnhancedSwipeableViews
                 index={index}
                 onChangeIndex={handleChangeIndex}
@@ -117,7 +117,7 @@ const Testimonials = () => {
     };
 
     return (
-        <CustomSection sx={{ backgroundColor: theme.palette.secondary.main }}>
+        <CustomSection sx={{ backgroundColor: theme.palette.background.paper }}>
             {/* <ParallaxBanner style={{ height: '100%' }}> */}
             {/* <ParallaxBannerLayer image={statistics.backgroundImage} speed={-25} /> */}
             {/* <ParallaxBannerLayer style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', height: '100%' }}> */}

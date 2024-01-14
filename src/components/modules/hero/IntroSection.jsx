@@ -43,7 +43,7 @@ const IntroSection = () => {
                                 <UnderlineStyledTitle variant='h3' sx={{ color: theme.palette.primary.main, textTransform: 'uppercase' }}>{companyName}</UnderlineStyledTitle>
                             </FadeRevealAnimation>
                             {/* <FadeRevealAnimation revealTime={1}> */}
-                                <Typography variant='h6' sx={{ color: theme.palette.accent.second, textTransform: 'uppercase' }}>{introduction.subHeading}</Typography>
+                                <Typography variant='h6' sx={{ color: theme.palette.primary.light, textTransform: 'uppercase' }}>{introduction.subHeading}</Typography>
                             {/* </FadeRevealAnimation> */}
                             <FadeRevealAnimation revealTime={fadeRevealTime+0.1}>
                                 <SectionParagraph>{introduction.description}</SectionParagraph>
@@ -54,12 +54,12 @@ const IntroSection = () => {
                                         <img src={madeInIndia.symbol} alt='Make In India' style={{width: '25%', height: 'auto', objectFit: 'contain'}} />
                                     </Box>
                                     <Divider orientation="vertical" flexItem sx={{
-                                        backgroundColor: theme.palette.accent.second,
+                                        backgroundColor: theme.palette.primary.light,
                                         width: 2,
                                         borderRadius: 8
                                     }} />
                                     <Box sx={{ py: 2, textTransform: 'uppercase', letterSpacing: 4, fontWeight: '600' }}>Since
-                                        <Typography sx={{ color: theme.palette.accent.second, fontWeight: '700', fontSize: '18px' }}>{since}</Typography>
+                                        <Typography sx={{ color: theme.palette.primary.light, fontWeight: '700', fontSize: '18px' }}>{since}</Typography>
                                     </Box>
                                 </Box>
                             </FadeRevealAnimation>

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 
 //#region MUI Imports
 import Box from '@mui/material/Box';
@@ -21,9 +21,25 @@ export default function SearchDrawer({ toggleSearchDrawer, searchDrawerState }) 
 
     const theme = useTheme();
 
+    const [searchText, setSearchText] = useState('');
+
+    const onChangeSearch = (event) => {
+        setSearchText(event.target.value)
+    }
+
     const searchContainer = () => (
         <Box
-            sx={{ width: 'auto', pt: theme.spacing(6), pb: theme.spacing(12), boxSizing: 'border-box', height: '100vh', overflow: 'hidden' }}
+            sx={{ 
+                width: 'auto', 
+                pt: theme.spacing(6), 
+                pb: theme.spacing(12), 
+                boxSizing: 'border-box', 
+                height: '100vh', 
+                overflow: 'hidden', 
+                backgroundColor: theme.palette.background.default,
+                display: 'flex',
+                flexDirection: 'column'
+            }}
             role="presentation"
         >
             {/* Search Container */}
@@ -37,16 +53,18 @@ export default function SearchDrawer({ toggleSearchDrawer, searchDrawerState }) 
                     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', p: 2, backgroundColor: theme.palette.primary.main }}>
                         <SearchRoundedIcon sx={{ color: theme.palette.primary.contrastText }} />
                     </Box>
-                    <TextField id="filled-basic"
+                    <TextField
                         hiddenLabel
                         placeholder='Search...'
                         variant="filled"
+                        onChange={onChangeSearch}
+                        value={searchText}
                         fullWidth />
                 </Box>
             </Container>
-            
-            <SearchResult />
-            
+
+            <SearchResult searchText={searchText} />
+
         </Box>
     );
 

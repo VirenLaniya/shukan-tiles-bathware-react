@@ -64,7 +64,8 @@ const LandingSlider = () => {
                                     textAlign: 'left',
                                     // backgroundColor: 'rgba(0, 0, 0, 0.5)',
                                     // background: 'linear-gradient(90deg, rgba(0,0,0,0.7) 35%, rgba(255,255,255,0) 85%)',
-                                    background: 'linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0, rgba(255,255,255,0) 100%)',
+                                    // background: 'linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0, rgba(255,255,255,0) 100%)',
+                                    background: 'linear-gradient(45deg, rgba(255, 255, 255, 0.85) 0, rgba(0,0,0,0) 75%)',
                                     height: '100%',
                                 }}>
                                     <SlideContentLS slide={slide} />

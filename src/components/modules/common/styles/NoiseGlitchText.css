@@ -11,10 +11,10 @@
  .glitch {
     position: relative;
     font-size: 60px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.2;
     color: #fff;
-    letter-spacing: 5px;
+    letter-spacing: 8px;
     z-index: 1;
  }
  

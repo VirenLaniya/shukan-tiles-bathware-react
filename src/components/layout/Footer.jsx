@@ -6,15 +6,15 @@ import { Link } from 'react-router-dom';
 
 //#region MUI Imports
 import {
-    Box, 
-    Container, 
-    Typography, 
-    Divider, 
+    Box,
+    Container,
+    Typography,
+    Divider,
     Grid,
-    InputAdornment, 
-    IconButton, 
-    OutlinedInput, 
-    Link as MuiLink, 
+    InputAdornment,
+    IconButton,
+    OutlinedInput,
+    Link as MuiLink,
     useTheme
 } from '@mui/material'
 import { alpha, styled } from '@mui/material/styles';
@@ -31,12 +31,14 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 //#endregion
 
 //#region Data Imports
-import { footerCompany, 
-    companyName, 
-    footerExplore, 
-    footerNewsLetter, 
-    footerContact, 
-    footerCopyright } from '../../data/common';
+import {
+    footerCompany,
+    companyName,
+    footerExplore,
+    footerNewsLetter,
+    footerContact,
+    footerCopyright
+} from '../../data/common';
 //#endregion
 
 //#region Style Customization
@@ -48,18 +50,18 @@ const FooterHeading = styled(Typography)(({ theme }) => ({
 }))
 
 const FooterLink = styled(Link)(({ theme }) => ({
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.grey[500],
     textDecoration: 'none',
     ':hover': {
-        color: theme.palette.secondary.main
+        color: `${theme.palette.primary.contrastText}!important`
     }
 }))
 
 const FooterContactLink = styled(MuiLink)(({ theme }) => ({
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.grey[500],
     textDecoration: 'none',
     ':hover': {
-        color: theme.palette.secondary.main
+        color: theme.palette.primary.contrastText
     }
 }))
 
@@ -82,7 +84,10 @@ const FooterInput = styled(OutlinedInput)(({ theme }) => ({
         'box-shadow',
     ]),
     '&.Mui-focused': {
-        borderColor: theme.palette.secondary.main
+        borderColor: theme.palette.primary.contrastText,
+        '.adornment-button': {
+            color: theme.palette.primary.contrastText
+        }
     },
     // Remove the gray line inside the input field
     '& .MuiOutlinedInput-notchedOutline': {
@@ -100,27 +105,30 @@ const FooterInput = styled(OutlinedInput)(({ theme }) => ({
 const GetIcon = (iconFor) => {
     const text = iconFor.toLowerCase();
     if (text.startsWith('address')) {
-        return <LocationOnRoundedIcon color='secondary' />
+        return <LocationOnRoundedIcon />
     } else if (text.startsWith('mobile')) {
-        return <CallRoundedIcon color='secondary' />
+        return <CallRoundedIcon />
     } else if (text.startsWith('email')) {
-        return <MailRoundedIcon color='secondary' />
+        return <MailRoundedIcon />
     }
 }
 
 const Connect = (platform, link, index) => {
+    const theme = useTheme();
+    const footerIconColor = theme.palette.grey[500]
+    const footerIconHover = theme.palette.primary.contrastText
 
     const iconFontSize = '28px';
     const icon = () => {
         switch (platform) {
             case "linkedin":
-                return <LinkedInIcon sx={{ fontSize: iconFontSize }} />;
+                return <LinkedInIcon sx={{ fontSize: iconFontSize, color: footerIconColor, ':hover': { color: footerIconHover } }} />;
             case "facebook":
-                return <FacebookRoundedIcon sx={{ fontSize: iconFontSize }} />
+                return <FacebookRoundedIcon sx={{ fontSize: iconFontSize, color: footerIconColor, ':hover': { color: footerIconHover } }} />
             case "instagram":
-                return <InstagramIcon sx={{ fontSize: iconFontSize }} />
+                return <InstagramIcon sx={{ fontSize: iconFontSize, color: footerIconColor, ':hover': { color: footerIconHover } }} />
             case "whatsapp":
-                return <WhatsAppIcon sx={{ fontSize: iconFontSize }} />
+                return <WhatsAppIcon sx={{ fontSize: iconFontSize, color: footerIconColor, ':hover': { color: footerIconHover } }} />
             default:
                 return;
         }
@@ -139,6 +147,8 @@ const Connect = (platform, link, index) => {
 const Footer = () => {
 
     const theme = useTheme();
+    // const footerText = alpha(theme.palette.primary.contrastText, 0.6);
+    const footerText = theme.palette.grey[500];
 
     return (
         <Box sx={{ backgroundColor: (theme) => theme.palette.primary.main }}>
@@ -148,7 +158,7 @@ const Footer = () => {
                         <Grid item xs={12} md={6} lg={3}>
                             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'center', md: 'start' } }}>
                                 <img src={footerCompany.logo} alt={companyName} style={{ width: '50%', maxWidth: '150px' }} />
-                                <Typography variant='body1' sx={{ py: 3, color: (theme) => theme.palette.primary.contrastText, lineHeight: 2 }}>
+                                <Typography variant='body1' sx={{ py: 3, color: footerText, lineHeight: 2 }}>
                                     {footerCompany.about}
                                 </Typography>
                                 <Box sx={{ display: 'flex', columnGap: 2 }}>
@@ -193,7 +203,7 @@ const Footer = () => {
                                                     aria-label="toggle password visibility"
                                                     edge="end"
                                                 >
-                                                    <MailRoundedIcon color='secondary' />
+                                                    <MailRoundedIcon className='adornment-button' sx={{ color: footerText,  }} />
                                                 </IconButton>
                                             </InputAdornment>
                                         }
@@ -207,7 +217,7 @@ const Footer = () => {
                             <Box>
                                 <FooterHeading variant='h5'>Contact</FooterHeading>
                                 <Divider sx={{ backgroundColor: (theme) => theme.palette.secondary.main, my: 3 }} />
-                                <Grid container spacing={2}>
+                                <Grid container spacing={2} sx={{ color: theme => theme.palette.primary.contrastText }}>
                                     {
                                         Object.keys(footerContact).map((key, index) => {
                                             const contactLink = () => {
@@ -221,9 +231,9 @@ const Footer = () => {
                                                 }
                                             }
                                             return (
-                                                <Grid item xs={12} sx={{ display: 'flex', columnGap: 2 }} key={index}>
-                                                    {GetIcon(key)}
-                                                    <FooterContactLink href={contactLink()} sx={{ color: theme => theme.palette.primary.contrastText, ':hover': {} }}>
+                                                <Grid item xs={12} key={index}>
+                                                    <FooterContactLink href={contactLink()} sx={{ display: 'flex', columnGap: 2 }}>
+                                                        {GetIcon(key)}
                                                         {footerContact[key].text}
                                                     </FooterContactLink>
                                                 </Grid>

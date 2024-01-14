@@ -1,4 +1,5 @@
-import logo from '/assets/common/company-logo.png'
+import logo from '/assets/common/company-logo.jpg'
+import logo2 from '/assets/common/company-logo-2.jpg'
 
 export const companyName = 'Shukan'
 export const since = '1960'
@@ -43,7 +44,7 @@ export const connect =  [
 
 //#region Footer
 export const footerCompany = {
-    logo: logo,
+    logo: logo2,
     about: 'We are "Shukan", a company that specialises in the manufacture, supply and export of Tiles and Bathware products. We would like to introduce ourselves to you as we wish to do business in India and require your help in this',
     connect: [
         {
@@ -96,5 +97,11 @@ export const footerContact = {
 
 export const footerCopyright = {
     copyrightText: 'Copyright © 2023 by Shukan. All Rights Reserved.'
+}
+//#endregion
+
+//#region Search
+export const search = {
+    notFoundMsg: 'No Product Found!'
 }
 //#endregion

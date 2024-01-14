@@ -5,10 +5,29 @@ import { createTheme, responsiveFontSizes, alpha } from '@mui/material/styles';
 const defaultTheme = createTheme();
 const { breakpoints, typography: { pxToRem } } = defaultTheme
 
-const primaryMainColor = '#2e2924';     // Pine Black
-const secondaryMainColor = '#fff0e8';   // Linen White
-const accentFirstColor = '#ef3340';     // Teal Blue
-const accentSecondColor = '#397d8d';    // Venetian Red
+// const primaryMainColor = '#2e2924';     // Pine Black
+// const secondaryMainColor = '#fff0e8';   // Linen White
+// const accentFirstColor = '#ef3340';     // Teal Blue
+// const accentSecondColor = '#397d8d';    // Venetian Red
+
+const primaryMainColor = '#003334';     
+const secondaryMainColor = '#dead24';
+const accentFirstColor = '#ffffff';
+const accentSecondColor = '#2C3333';
+
+const primaryPalette = {
+  light: '#335b5c',
+  main: '#003334',
+  dark: '#002324',
+  contrastText: '#fff', // White
+}
+
+const secondaryPalette = {
+  light: '#e4bd4f',
+  main: '#dead24',
+  dark: '#9b7919',
+  contrastText: '#003334',
+}
 
 let Theme = createTheme({
 
@@ -48,21 +67,29 @@ let Theme = createTheme({
   },
 
   palette: {
-    primary: {
-      main: primaryMainColor,
-      contrastText: secondaryMainColor
-    },
-    secondary: {
-      main: secondaryMainColor,
-      contrastText: primaryMainColor
-    },
-    accent: {
-        first: accentFirstColor,
-        second: accentSecondColor
-    }
+    // primary: {
+    //   main: primaryMainColor,
+    //   contrastText: accentFirstColor
+    // },
+    // secondary: {
+    //   main: secondaryMainColor,
+    //   contrastText: primaryMainColor,
+    //   light: '#fcf7e9'
+    // },
+    // accent: {
+    //     first: accentFirstColor,
+    //     second: accentSecondColor
+    // }
     // background: {
     //   paper: backgroundColor
     // }
+
+    primary: primaryPalette,
+    secondary: secondaryPalette,
+    background: {
+      default: '#ffffff',
+      paper: '#fcf7e9'
+    }
   },
 
   components: {
@@ -93,9 +120,11 @@ let Theme = createTheme({
         },
         containedPrimary: {
           position: 'relative',
+          // backgroundColor: secondaryPalette.main,
+          // color: secondaryPalette.contrastText,
           ':hover': {
-            color: 'white',
-            backgroundColor: accentSecondColor,
+            backgroundColor: primaryPalette.dark,
+            // color: primaryPalette.dark
           },
           // '::before': {
           //   content: "''",
@@ -127,11 +156,11 @@ let Theme = createTheme({
           style: {
             textTransform: 'none',
             border: `2px solid ${primaryMainColor}`,
-            color: primaryMainColor,
+            color: defaultTheme.palette.common.white,
             borderRadius: '8px',
             '&:hover': {
-              backgroundColor: primaryMainColor,
-              color: defaultTheme.palette.common.white
+              backgroundColor: secondaryPalette.main,
+              color: primaryPalette.main
             },
           }
         },
@@ -140,13 +169,13 @@ let Theme = createTheme({
           style: {
             textTransform: 'none',
             border: `2px solid ${primaryMainColor}`,
-            color: primaryMainColor,
+            color: defaultTheme.palette.common.white,
             borderRadius: '8px',
             padding: '6px 12px',
             fontSize: defaultTheme.typography.pxToRem(13),
             '&:hover': {
-              backgroundColor: primaryMainColor,
-              color: defaultTheme.palette.common.white
+              backgroundColor: secondaryPalette.main,
+              color: primaryPalette.main
             },
           }
         },
@@ -155,13 +184,13 @@ let Theme = createTheme({
           style: {
             textTransform: 'none',
             border: `2px solid ${primaryMainColor}`,
-            color: primaryMainColor,
+            color: defaultTheme.palette.common.white,
             borderRadius: '8px',
             padding: '8px 16px',
             fontSize: defaultTheme.typography.pxToRem(15),
             '&:hover': {
-              backgroundColor: primaryMainColor,
-              color: defaultTheme.palette.common.white
+              backgroundColor: secondaryPalette.main,
+              color: primaryPalette.main
             },
           }
         },
@@ -173,8 +202,8 @@ let Theme = createTheme({
             color: secondaryMainColor,
             borderRadius: '8px',
             '&:hover': {
-              backgroundColor: secondaryMainColor,
-              color: primaryMainColor
+              backgroundColor: secondaryPalette.main,
+              color: primaryPalette.main
             }
           }
         }

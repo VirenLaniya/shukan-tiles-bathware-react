@@ -19,19 +19,22 @@ const SlideContentLS = ({ slide }) => {
             </Box> */}
             <Box>
                 <Typography variant='h4' sx={{
-                    mb: { xs: 2, md: 4 },
-                    color: (theme) => theme.palette.secondary.main,
+                    mb: { xs: 1.5, md: 2 },
+                    color: (theme) => theme.palette.grey[700],
+                    fontWeight: 500
                 }}>{slide.description}</Typography>
 
                 <Typography variant='h2' sx={{
-                    mb: { xs: 2, md: 4 },
-                    color: (theme) => theme.palette.secondary.main,
+                    mb: { xs: 2, md: 5 },
+                    color: (theme) => theme.palette.primary.main,
                     textTransform: 'uppercase',
-                    letterSpacing: 8
+                    letterSpacing: 8,
+                    fontWeight: 500
                 }}>{slide.title}</Typography>
 
                 {/* <Button variant='contained' size='large'>Know About Us</Button> */}
                 <Button variant='contained' size={ResponsiveButton('medium')}>Know About Us</Button>
+                {/* <Button variant='outlined' size={ResponsiveButton('medium')}>Know About Us</Button> */}
                 {/* <Button variant='contained' size='small'>Know About Us</Button> */}
             </Box>
         </CardContent >

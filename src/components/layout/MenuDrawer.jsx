@@ -37,7 +37,7 @@ const CustomNavLink = styled(NavLink)(({ theme }) => ({
     letterSpacing: '3px',
     '&.active': {
         // Define your active link styles here
-        color: `${theme.palette.accent.first}!important`, // Change this to your desired style
+        color: `${theme.palette.secondary.main}!important`, // Change this to your desired style
     },
 }));
 //#endregion
@@ -82,7 +82,7 @@ const MenuDrawer = ({ menuDrawerState, toggleMenuDrawer }) => {
 
     const list = () => (
         <Box
-            sx={{ width: 300, py: 4, px: 1, backgroundColor: theme.palette.secondary.main, height: '100%' }}
+            sx={{ width: 300, py: 4, px: 1, backgroundColor: theme.palette.background.default, height: '100%' }}
             role="presentation"
             onClick={toggleMenuDrawer(false)}
             onKeyDown={toggleMenuDrawer(false)}

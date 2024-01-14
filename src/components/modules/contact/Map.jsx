@@ -17,7 +17,7 @@ import { map } from '../../../data/contact'
 const Map = () => {
     const theme = useTheme()
     return (
-        <CustomSection sx={{ backgroundColor: theme.palette.secondary.main }}>
+        <CustomSection sx={{ backgroundColor: theme.palette.background.paper }}>
             <FadeRevealAnimation>
                 <SectionTitle title={map.title} />
             </FadeRevealAnimation>

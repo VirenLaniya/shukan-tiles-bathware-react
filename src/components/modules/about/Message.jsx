@@ -41,16 +41,16 @@ const Introduction = () => {
                     <SectionTitle title={message.title} sx={{ color: theme.palette.primary.contrastText }} />
                 </FadeRevealAnimation>
             </CustomSection>
-            <Container sx={{ width: { xs: '95%', md: '100%' }, backgroundColor: theme.palette.secondary.main, py: 12, px: { xs: 4, md: 8 }, transform: `translateY(-${theme.spacing(12)})`, zIndex: 2 }}>
+            <Container sx={{ width: { xs: '95%', md: '100%' }, backgroundColor: theme.palette.background.paper, py: 12, px: { xs: 4, md: 8 }, transform: `translateY(-${theme.spacing(12)})`, zIndex: 2 }}>
                 <Grid container rowSpacing={10}>
                     <Grid item xs={12} md={5}>
                         <FadeRevealAnimation>
                             <Box sx={{ display: 'flex', justifyContent: 'center', px: 4 }}>
                                 <Box sx={{ position: 'relative', width: { xs: '100%', md: '75%' }, mx: 'auto' }}>
                                     {/* <Box sx={{ position: 'absolute', width: '64px', height: '100%', top: '64px', left: '-32px', backgroundColor: theme.palette.primary.main }}></Box>
-                                    <Box sx={{ position: 'absolute', width: '8px', height: '100%', top: '48px', left: '40px', backgroundColor: theme.palette.accent.second }}></Box> */}
+                                    <Box sx={{ position: 'absolute', width: '8px', height: '100%', top: '48px', left: '40px', backgroundColor: theme.palette.primary.light }}></Box> */}
                                     <Box sx={{ position: 'absolute', width: '64px', height: '75%', top: '25%', left: '-32px', backgroundColor: theme.palette.primary.main }}></Box>
-                                    <Box sx={{ position: 'absolute', width: '6px', height: '75%', top: '25%', left: '40px', backgroundColor: theme.palette.accent.second }}></Box>
+                                    <Box sx={{ position: 'absolute', width: '6px', height: '75%', top: '25%', left: '40px', backgroundColor: theme.palette.secondary.main }}></Box>
                                     <img className='message-picture' src={message.image} alt={message.title} />
                                     <Box sx={{ pl: 7 }}>
                                         <Typography variant='h5'>{message.managingDirector}</Typography>
@@ -64,10 +64,10 @@ const Introduction = () => {
                         <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', rowGap: 5 }}>
                             <FadeRevealAnimation revealTime={1}>
                                 <Box>
-                                    <FormatQuoteRoundedIcon sx={{color: theme.palette.accent.first, transform: 'rotate(180deg)', fontSize: 60}} />
-                                    <Typography variant='h6' sx={{ color: theme.palette.accent.second, textTransform: 'uppercase', textAlign: 'center' }}>{introduction.subHeading}</Typography>
+                                    <FormatQuoteRoundedIcon sx={{color: theme.palette.secondary.main, transform: 'rotate(180deg)', fontSize: 60}} />
+                                    <Typography variant='h6' sx={{ color: theme.palette.primary.light, textTransform: 'uppercase', textAlign: 'center' }}>{introduction.subHeading}</Typography>
                                     <Typography sx={{textAlign: 'end'}}>
-                                        <FormatQuoteRoundedIcon sx={{color: theme.palette.accent.first, fontSize: 60}} />
+                                        <FormatQuoteRoundedIcon sx={{color: theme.palette.secondary.main, fontSize: 60}} />
                                     </Typography>
                                 </Box>
                             </FadeRevealAnimation>

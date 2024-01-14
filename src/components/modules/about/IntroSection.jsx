@@ -27,7 +27,7 @@ const IntroSection = () => {
             <Container>
                 <Grid container spacing={10}>
                     <Grid item xs={12} md={6}>
-                        <Box sx={{ width: '100%', height: '100%', minHeight: 10, borderTop: `8px solid ${theme.palette.accent.second}`, borderBottom: `8px solid ${theme.palette.accent.first}`, display: 'flex', alignItems: 'center' }}>
+                        <Box sx={{ width: '100%', height: '100%', minHeight: 10, borderTop: `8px solid ${theme.palette.primary.light}`, borderBottom: `8px solid ${theme.palette.secondary.main}`, display: 'flex', alignItems: 'center' }}>
                             <FadeRevealAnimation>
                                 <img src={introduction.introImage} alt={companyName} style={{ width: '100%', height: '100%', objectFit: 'contain', border: '8px solid transparent' }} />
                             </FadeRevealAnimation>
@@ -40,7 +40,7 @@ const IntroSection = () => {
                                 <SectionTitle sx={{ color: theme.palette.primary.main, pb: 1, textAlign: 'left', fontSize: '40px!important' }} title={companyName} />
                             </FadeRevealAnimation>
                             {/* <FadeRevealAnimation revealTime={1}> */}
-                            <Typography variant='h6' sx={{ color: (theme) => theme.palette.accent.second, textTransform: 'uppercase' }}>{introduction.subHeading}</Typography>
+                            <Typography variant='h6' sx={{ color: (theme) => theme.palette.primary.light, textTransform: 'uppercase' }}>{introduction.subHeading}</Typography>
                             {/* </FadeRevealAnimation> */}
                             <FadeRevealAnimation revealTime={fadeRevealTime + 0.1}>
                                 <SectionParagraph>{introduction.description}</SectionParagraph>
@@ -53,12 +53,12 @@ const IntroSection = () => {
                                         {/* </Link> */}
                                     </Box>
                                     <Divider orientation="vertical" flexItem sx={{
-                                        backgroundColor: (theme) => theme.palette.accent.second,
+                                        backgroundColor: (theme) => theme.palette.secondary.main,
                                         width: 2,
                                         borderRadius: 8
                                     }} />
                                     <Box sx={{ textTransform: 'uppercase', letterSpacing: 4, fontWeight: '600' }}>Since
-                                        <Typography sx={{ color: (theme) => theme.palette.accent.second, fontWeight: '700', fontSize: '18px' }}>{since}</Typography>
+                                        <Typography sx={{ color: (theme) => theme.palette.primary.light, fontWeight: '700', fontSize: '18px' }}>{since}</Typography>
                                     </Box>
                                 </Box>
                             </FadeRevealAnimation>

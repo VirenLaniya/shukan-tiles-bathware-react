@@ -31,7 +31,7 @@ const Introduction = () => {
                     <SectionTitle title={introduction.heading} sx={{ color: theme.palette.primary.contrastText }} />
                 </FadeRevealAnimation>
             </CustomSection>
-            <Container maxWidth='md' sx={{ width: { xs: '95%', md: '100%' }, backgroundColor: theme.palette.secondary.main, py: 12, px: { xs: 4, md: 8 }, transform: `translateY(-${theme.spacing(12)})`, zIndex: 2 }}>
+            <Container maxWidth='md' sx={{ width: { xs: '95%', md: '100%' }, backgroundColor: theme.palette.background.paper, py: 12, px: { xs: 4, md: 8 }, transform: `translateY(-${theme.spacing(12)})`, zIndex: 2 }}>
                 <Box>
                     <FadeRevealAnimation>
                         <Box sx={{ width: { xs: '100%', md: '75%' }, mx: 'auto' }}>
@@ -40,7 +40,7 @@ const Introduction = () => {
                     </FadeRevealAnimation>
                     <Box sx={{ display: 'flex', flexDirection: 'column', rowGap: 5, pt: 12 }}>
                         {/* <FadeRevealAnimation revealTime={1}> */}
-                        <Typography variant='h6' sx={{ color: theme.palette.accent.second, textTransform: 'uppercase', textAlign: 'center' }}>{introduction.subHeading}</Typography>
+                        <Typography variant='h6' sx={{ color: theme.palette.primary.light, textTransform: 'uppercase', textAlign: 'center' }}>{introduction.subHeading}</Typography>
                         {/* </FadeRevealAnimation> */}
                         <FadeRevealAnimation revealTime={fadeRevealTime + 0.1}>
                             <Typography variant='p' sx={{ lineHeight: 2 }}>{introduction.description}</Typography>
@@ -53,12 +53,12 @@ const Introduction = () => {
                                     </Link>
                                 </Box>
                                 <Divider orientation="vertical" flexItem sx={{
-                                    backgroundColor: theme.palette.accent.second,
+                                    backgroundColor: theme.palette.primary.light,
                                     width: 2,
                                     borderRadius: 8
                                 }} />
                                 <Box sx={{ py: 2, textTransform: 'uppercase', letterSpacing: 4, fontWeight: '600' }}>Since
-                                    <Typography sx={{ color: theme.palette.accent.second, fontWeight: '700', fontSize: '18px' }}>{since}</Typography>
+                                    <Typography sx={{ color: theme.palette.primary.light, fontWeight: '700', fontSize: '18px' }}>{since}</Typography>
                                 </Box>
                             </Box>
                         </FadeRevealAnimation>

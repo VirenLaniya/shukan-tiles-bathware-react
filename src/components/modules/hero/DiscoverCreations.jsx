@@ -20,7 +20,7 @@ import { discoverCreations } from '../../../data/hero'
 
 export default function DiscoverCreations() {
     return (
-        <CustomSection sx={{ backgroundColor: theme => theme.palette.secondary.main }}>
+        <CustomSection sx={{ backgroundColor: theme => theme.palette.background.paper }}>
             <Container>
                 <FadeRevealAnimation>
                     <SectionTitle title={discoverCreations.title} />

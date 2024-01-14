@@ -49,11 +49,11 @@ import ConnectButton from '../modules/common/ConnectButton';
 const CustomNavLink = styled(NavLink)(({ theme }) => ({
   '&.active': {
     // Define your active link styles here
-    color: `${theme.palette.common.white}!important`,
-    fontWeight: 500
+    color: `${theme.palette.primary.main}!important`,
+    fontWeight: 600
   },
   '&.active::after': {
-    backgroundColor: `${theme.palette.common.white}!important`
+    backgroundColor: `${theme.palette.primary.main}!important`
   }
 }));
 //#endregion
@@ -156,7 +156,7 @@ const Header = (props) => {
       <CssBaseline />
       {/* <ElevationScroll {...props}> */}
       <HideOnScroll {...props}>
-        <AppBar>
+        <AppBar sx={{backgroundColor: theme.palette.background.default}}>
           <Container maxWidth="xl">
             <Toolbar sx={{ justifyContent: 'space-between', height: '90px' }} disableGutters>
               <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center' }}>
@@ -167,6 +167,7 @@ const Header = (props) => {
                   aria-haspopup="true"
                   onClick={toggleMenuDrawer(true)}
                   color="inherit"
+                  sx={{color: theme.palette.primary.main}}
                 >
                   <MenuIcon fontSize='inherit' />
                 </IconButton>
@@ -178,12 +179,12 @@ const Header = (props) => {
 
               <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', columnGap: '24px' }}>
                 {pages.map((page, index) => (
-                  <CustomNavLink to={page.path} className='header-link' key={index} sx={{ color: theme.palette.secondary.main, '::after': { backgroundColor: theme.palette.secondary.main } }}>{page.title}</CustomNavLink>
+                  <CustomNavLink to={page.path} className='header-link' key={index} sx={{ color: theme.palette.grey[700], '::after': { backgroundColor: theme.palette.grey[700] } }}>{page.title}</CustomNavLink>
                 ))}
               </Box>
 
               <Box>
-                <IconButton sx={{ display: 'flex', color: theme.palette.primary.contrastText }} size='large' onClick={toggleSearchDrawer(true)}>
+                <IconButton sx={{ display: 'flex', color: theme.palette.primary.main }} size='large' onClick={toggleSearchDrawer(true)}>
                   <SearchRoundedIcon fontSize='inherit' />
                 </IconButton>
                 <SearchDrawer toggleSearchDrawer={toggleSearchDrawer} searchDrawerState={searchDrawerState} />

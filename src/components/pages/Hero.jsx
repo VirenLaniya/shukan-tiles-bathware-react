@@ -36,7 +36,7 @@ const Hero = () => {
       <EffectCoverflowSlider />
       {/* <Products />
       <WhatWeDo /> */}
-      <Statistics />
+      {/* <Statistics /> */}
       {/* <WhyChooseUs /> */}
       <Testimonials />
       {/* <AwardRecognition /> */}

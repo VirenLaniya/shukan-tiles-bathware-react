@@ -63,7 +63,7 @@ const ImageTextParallaxAnimation = ({ isImageFirst, imageUrl, text }) => {
                         lineHeight: '1.2',
                         textAlign: 'center',
                         margin: 0,
-                        color: `${theme.palette.accent.first}`,
+                        color: `${theme.palette.secondary.main}`,
                         textTransform: 'uppercase',
                         backgroundColor: `${theme.palette.secondary.main}`
                     }}>{text}</motion.h2>

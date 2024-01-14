@@ -8,8 +8,9 @@ import { styled } from '@mui/material/styles'
 const CustomLink = styled(Link)(({ theme }) => ({
     display: 'block',
     color: theme.palette.text.secondary,
+    transition: '0.3s',
     ':hover': {
-        color: theme.palette.secondary.main
+        color: theme.palette.primary.contrastText+"!important"
     }
 }))
 
@@ -55,13 +56,19 @@ const ContactDetailCard = ({ children, contact }) => {
             transition: '0.5s ease',
             height: '100%',
             '*': {
-                lineHeight: '210%',
+                lineHeight: '210%'
             },
             ':hover': {
-                backgroundColor: theme => theme.palette.accent.second,
+                backgroundColor: theme => theme.palette.primary.main,
             },
             ':hover *': {
-                color: theme => theme.palette.common.white
+                color: theme => theme.palette.grey[400]
+            },
+            ':hover .card-heading': {
+                color: theme=>theme.palette.primary.contrastText
+            },
+            ':hover .card-heading *': {
+                color: theme=>theme.palette.primary.contrastText
             }
         }}>
             {/* <CardMedia
@@ -71,7 +78,7 @@ const ContactDetailCard = ({ children, contact }) => {
                     alt="green iguana"
                 /> */}
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div" sx={{ letterSpacing: 3, display: 'flex', alignItems: 'center' }}>
+                <Typography className='card-heading' gutterBottom variant="h5" component="div" sx={{ letterSpacing: 3, display: 'flex', alignItems: 'center'}}>
                     <contact.icon sx={{ mr: 1 }} /> {contact.title}
                 </Typography>
                 {

@@ -20,24 +20,27 @@ import { acknowledgement } from '../../../data/hero';
 
 const Acknowledgement = () => {
     return (
-        <Box style={{ height: '450px' }}>
+        <Box style={{ height: '90vh' }}>
             <ParallaxBanner style={{ height: '100%' }}>
                 <ParallaxBannerLayer image={acknowledgement.backgroundImage} speed={-30} />
-                <ParallaxBannerLayer style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', height: '100%' }}>
+                <ParallaxBannerLayer style={{ backgroundColor: 'rgba(255, 255, 255, 0.7)', height: '100%' }}>
                     <Container sx={{
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
                         height: '100%',
-                        gap: 5
+                        gap: 6
                     }}>
-                        <FormatQuoteIcon sx={{ color: (theme) => theme.palette.accent.first, fontSize: 64 }} />
+                        <FormatQuoteIcon sx={{ color: (theme) => theme.palette.secondary.main, fontSize: 92 }} />
                         <FadeRevealAnimation>
                             <Typography variant='h4' sx={{
-                                color: (theme) => theme.palette.secondary.main,
+                                // color: (theme) => theme.palette.common.white,
+                                color: (theme) => theme.palette.primary.main,
                                 textTransform: 'uppercase',
                                 textAlign: 'center',
+                                fontWeight: 500,
+                                lineHeight: 1.5
                                 // letterSpacing: '2px'
                             }}>
                                 {acknowledgement.text}

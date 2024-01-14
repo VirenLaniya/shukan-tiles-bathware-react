@@ -17,6 +17,11 @@ import LanRoundedIcon from '@mui/icons-material/LanRounded';
 
 const ConnectButton = () => {
     const theme = useTheme();
+
+    const facebookColor = '#1877F2'
+    const instagramColor = '#c13584'
+    const whatsAppColor = '#25d366'
+
     const [checked, setChecked] = React.useState(false);
 
     const trigger = useScrollTrigger({
@@ -34,8 +39,8 @@ const ConnectButton = () => {
             <Box sx={{ position: !trigger ? 'fixed' : 'static', display: 'flex', flexDirection: 'column-reverse', justifyContent: 'center', alignItems: 'center', rowGap: 1 }}>
                 <Grow in={!trigger || checked}>
                     <Link href='#'>
-                        <IconButton sx={{ border: `2px solid #1877F2` }}>
-                            <FacebookRoundedIcon sx={{ color: '#1877F2' }} />
+                        <IconButton sx={{ width: '42px', height: '42px', background: alpha(facebookColor, 0.7), ':hover': { background: facebookColor } }}>
+                            <FacebookRoundedIcon sx={{ color: theme.palette.common.white }} />
                         </IconButton>
                     </Link>
                 </Grow>
@@ -46,8 +51,8 @@ const ConnectButton = () => {
                     {...(checked ? { timeout: 500 } : {})}
                 >
                     <Link href='#'>
-                        <IconButton sx={{ border: '2px solid #c13584' }}>
-                            <InstagramIcon sx={{ color: '#c13584' }} />
+                        <IconButton sx={{ width: '42px', height: '42px', background: alpha(instagramColor, 0.7), ':hover': { background: instagramColor } }}>
+                            <InstagramIcon sx={{ color: theme.palette.common.white }} />
                         </IconButton>
                     </Link>
                 </Grow>
@@ -57,8 +62,8 @@ const ConnectButton = () => {
                     {...(checked ? { timeout: 1000 } : {})}
                 >
                     <Link href='#'>
-                        <IconButton sx={{ border: '2px solid #25d366' }}>
-                            <WhatsAppIcon sx={{ color: '#25d366' }} />
+                        <IconButton sx={{ width: '42px', height: '42px', background: alpha(whatsAppColor, 0.7), ':hover': { background: whatsAppColor } }}>
+                            <WhatsAppIcon sx={{ color: theme.palette.common.white }} />
                         </IconButton>
                     </Link>
                 </Grow>
@@ -69,9 +74,10 @@ const ConnectButton = () => {
                     onChange={handleChange}
                     sx={{
                         visibility: trigger ? 'visible' : 'hidden',
-                        backgroundColor: alpha(theme.palette.accent.second, 0.8),
+                        color: theme.palette.primary.main,
+                        backgroundColor: alpha(theme.palette.secondary.main, 0.8),
                         ':hover': {
-                            backgroundColor: theme.palette.accent.second
+                            backgroundColor: theme.palette.secondary.main
                         }
                     }} />
             </Box>

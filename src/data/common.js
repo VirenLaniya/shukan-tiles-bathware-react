@@ -15,8 +15,8 @@ export const pages = [{
     title: 'About'
 }, 
 {
-    path: '/product',
-    title: 'Product'
+    path: '/collection',
+    title: 'Collection'
 },
 {
     path: '/contact',

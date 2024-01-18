@@ -18,6 +18,7 @@ import About from "./components/pages/About";
 import Product from "./components/pages/Product";
 import Contact from "./components/pages/Contact";
 //#endregion
+import Collection from "./components/pages/Collection";
 
 //#region Style Imports
 import theme from './Theme'
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Hero /> },
       { path: "/about", element: <About />},
-      { path: "/product", element: <Product />},
+      { path: "/collection", element: <Collection />},
       { path: "/contact", element: <Contact />}
     ]
   }

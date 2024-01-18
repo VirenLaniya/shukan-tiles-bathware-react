@@ -48,7 +48,7 @@ const Introduction = () => {
                         <FadeRevealAnimation revealTime={fadeRevealTime + 0.2}>
                             <Box sx={{ display: 'flex', columnGap: 5, alignItems: 'center', justifyContent: 'center' }}>
                                 <Box sx={{ py: 2 }}>
-                                    <Link to={pages.filter(page => page.title === 'Product')[0].path}>
+                                    <Link to={pages.filter(page => page.title === 'Collection')[0].path}>
                                         <Button variant='outlined' sx={{ px: 4, py: 2, fontSize: '16px' }}>Discover More</Button>
                                     </Link>
                                 </Box>

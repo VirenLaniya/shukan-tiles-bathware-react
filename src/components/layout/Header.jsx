@@ -179,7 +179,7 @@ const Header = (props) => {
 
               <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', columnGap: '24px' }}>
                 {pages.map((page, index) => (
-                  <CustomNavLink to={page.path} className='header-link' key={index} sx={{ color: theme.palette.grey[700], '::after': { backgroundColor: theme.palette.grey[700] } }}>{page.title}</CustomNavLink>
+                  <CustomNavLink to={page.path} className='header-link' key={index} sx={{ fontSize: {xs: 18, md: 17}, color: theme.palette.grey[700], '::after': { backgroundColor: theme.palette.grey[700] } }}>{page.title}</CustomNavLink>
                 ))}
               </Box>
 

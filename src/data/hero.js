@@ -35,16 +35,20 @@ export const landingSlider = [{
     title: 'Shukan',
     description: 'Welcome to',
     image: image1,
-    buttonText: 'Discover More',
+    buttonText: 'Know About Us',
     buttonLink: '/about'    
 }, {
     title: 'Every Space',
     description: 'Elegance for',
     image: image2,
+    buttonText: 'Explore Collections',
+    buttonLink: '/collection'
 }, {
     title: 'Exquisite Designs',
     description: 'Elevate your daily routine with our',
     image: image3,
+    buttonText: 'Connect with Us',
+    buttonLink: '/contact'
 }];
 
 //#endregion
@@ -58,9 +62,11 @@ export const landingSlider = [{
 // }
 export const introduction = {
     heading: "We stands for Design, Quality and Culture.",
-    subHeading: "FOR US SOURCING OF MATERIALS IS A MATTER OF TIME...",
-    description: "The company excels the skill to source out the products from Indian Market for the clients on right time and from right place. The mission of the company is to set a landmark in service industry an upcoming industry with high potential. A strong base in India Manufacturing Sector, Service Sector and Technology Sector is our strength, which is a key factor to bridge the needs of our overseas clients and Indian Market.",
-    introImage: heroIntroImg
+    subHeading: "Elevate Your Bathing Experience with Shukan: Where Design Brilliance, Uncompromising Quality, and Cultural Sustainability Converge.",
+    description: "A fusion of design brilliance, uncompromising quality, and a cultural dedication to elevate the art of bathing. Our ceramic bathware transcends the ordinary, embodying a harmonious blend of exquisite aesthetics, enduring craftsmanship, and a commitment to fostering a culture of sustainability in every detail.",
+    introImage: heroIntroImg,
+    discoverMorePath: '/about',
+    discoverMore: 'Discover More'
 }
 //#endregion
 
@@ -69,15 +75,15 @@ export const discoverCreations = {
     title: 'Discover Creations',
     creations: [
         {
-            title: 'Kitchen',
+            title: 'HDHMR',
             image: creationImage1
         },
         {
-            title: 'Bathware',
+            title: 'Slab Vanity',
             image: creationImage2
         },
         {
-            title: 'Tiles',
+            title: 'PVC Vanity',
             image: creationImage3
         }
     ]
@@ -87,7 +93,7 @@ export const discoverCreations = {
 //#region Acknowledgement
 export const acknowledgement = {
     backgroundImage: acknowledgementPeopleMeeting,
-    text: "WE AS INDIAN EXPORTER AND YOUR RELIABLE SOURCING AGENT CONNECT YOU WITH INDIAN INCREDIBLE Products"
+    text: "Unlocking India's Craftsmanship: We're Your Trusted Export Partner, Bringing You the Best of Incredible Indian Products"
 }
 //#endregion
 
@@ -213,16 +219,20 @@ export const whyChooseUs = {
 //#region Testimonials
 export const testimonials = [
     {
-        text: "We Would like to take this opportunity to express our appreciation for the good services, which we have received from your company MITTAL EXPORTS.",
-        author: "Karmi Engineering Pvt. Ltd."
+        text: "Shukan exceeded my expectations! Their bathware not only adds a touch of elegance to my space but also showcases exceptional craftsmanship. A reliable export partner indeed!",
+        author: "Sarah M., Interior Designer"
     },
     {
-        text: "We woulid like to take this opportunity to you express our appreciation for the good service which we have received from your company MITTAL EXPORTS.",
-        author: "KABRA GLOBAL"
+        text: "Impressed with Shukan's commitment to quality and sustainability. The ceramic products are not just beautiful; they're a statement of cultural brilliance. A proud addition to our collection!",
+        author: "Michael L., Retailer"
     },
     {
-        text: "We woulid like to take this opportunity to you express our appreciation for the good service which we have received from your company MITTAL EXPORTS.",
-        author: "KABRA GLOBAL"
+        text: "The fusion of design and cultural sustainability in Shukan's bathware is unparalleled. A true testament to India's rich craftsmanship. Highly recommended!",
+        author: "Elena S., Homeowner"
+    },
+    {
+        text: "As an exporter, Shukan has been our go-to partner for sourcing unique Indian products. The reliability and quality they offer make them stand out in the industry.",
+        author: "Alex K., Exporter and Distributor"
     }
 ]
 //#endregion

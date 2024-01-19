@@ -24,22 +24,27 @@ export const pages = [{
 }];
 
 export const connect =  [
-    {
-        platform: 'facebook',
-        link: 'https://www.google.com'
-    },
+    // {
+    //     platform: 'facebook',
+    //     link: 'https://www.google.com'
+    // },
     {
         platform: 'whatsapp',
-        link: 'https://www.google.com'
+        link: 'https://wa.me/919662788188'
     },
     {
         platform: 'instagram',
-        link: 'https://www.google.com',
+        link: 'https://www.instagram.com/sarvesh_shukan_bathware?igsh=MWllb3JjYzlzaG5oNQ==',
     },
+    // {
+    //     platform: 'linkedin',
+    //     link: 'https://www.google.com',
+    // },
     {
-        platform: 'linkedin',
-        link: 'https://www.google.com',
-    }
+        platform: 'mail',
+        link: 'sarvesh.kundariya@shukanbathware.com',
+    },
+
 ]
 
 //#region Footer
@@ -74,24 +79,24 @@ export const footerNewsLetter = {
 
 export const footerContact = {
     address: {
-        text: '501, Aaryan Workspaces, ST.Xaviers College Corner, Hotel Klassic Gold Road, Navrangpura, Ahmedabad - 380009.',
+        text: 'SHUKAN BATHWARE, Khokhara Hanuman Road, Opp. Monolith Surface LLP., Morbi 363 642,Gujarat (India)',
         link: ''
     },
     mobile1: {
-        text: '+91 123456811',
-        link: '+91 123456811'
+        text: '+91 9662788188',
+        link: '+91 9662788188'
     },
     mobile2: {
-        text: '+91 79 123456811/26402270',
-        link: '+91 79 123456811/26402270'
+        text: '+91 9537255155',
+        link: '+91 9537255155'
     },
     email1: {
-        text: 'marketing1@shukan.com',
-        link: 'marketing1@shukan.com'
+        text: 'info@shukanbathware.com',
+        link: 'info@shukanbathware.com'
     },
     email2: {
-        text: 'mail@shukan.com',
-        link: 'mail@shukan.com'
+        text: 'sarvesh.kundariya@-shukanbathware.com',
+        link: 'sarvesh.kundariya@shukanbathware.com'
     }
 }
 

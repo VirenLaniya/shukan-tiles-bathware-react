@@ -22,7 +22,7 @@ const LandingSlider = () => {
     return (
         <Box sx={{
             width: '100%',
-            height: { xs: '40vh', md: '100vh' },
+            height: { xs: '45vh', md: '100vh' },
             // borderRadius: '0% 0% 40% 0% / 0% 0% 70% 0%',
             // borderRadius: '0% 0% 100% 0% / 0% 40% 25% 0%;',
             overflow: 'hidden'

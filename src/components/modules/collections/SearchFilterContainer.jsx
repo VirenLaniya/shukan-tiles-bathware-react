@@ -44,20 +44,20 @@ function getStyles(name, personName, theme) {
 const SearchFilterContainer = ({ onChangeSearch, filter }) => {
 
     const theme = useTheme();
-    const [personName, setPersonName] = React.useState([]);
+    const [filterState, setFilterState] = React.useState([]);
 
-    const handleChange = (event) => {
+    const handleFilterChange = (event) => {
         const {
             target: { value },
         } = event;
-        setPersonName(
+        setFilterState(
             // On autofill we get a stringified value.
             typeof value === 'string' ? value.split(',') : value,
         );
     };
 
     return (
-        <CustomSection>
+        <CustomSection sx={{pb: 6}}>
             <SectionTitle title='Explore Our Collection' />
             <Container>
                 <Box sx={{ pb: theme.spacing(6), display: 'flex', alignItems: 'stretch', gap: 1 }}>
@@ -82,8 +82,8 @@ const SearchFilterContainer = ({ onChangeSearch, filter }) => {
                         <Select
                             multiple
                             displayEmpty
-                            value={personName}
-                            onChange={(event) => onChangeSearch(event)}
+                            value={filterState}
+                            onChange={(event) => handleFilterChange(event)}
                             input={<FilledInput hiddenLabel />}
                             renderValue={(selected) => {
                                 if (selected.length === 0) {
@@ -101,8 +101,11 @@ const SearchFilterContainer = ({ onChangeSearch, filter }) => {
                                 height: '100%',
                                 backgroundColor: theme.palette.primary.main + "!important",
                                 color: theme.palette.primary.contrastText,
+                                '.MuiSelect-select': {
+                                    py: 0
+                                },
                                 '>*': {
-                                    color: theme.palette.primary.contrastText
+                                    color: `${theme.palette.primary.contrastText}!important`
                                 }
                             }}
                         >

@@ -15,7 +15,7 @@ const Contact = () => {
       <ContactDetailsSection />
       <Map />
       {/* <DividerTitle text='Write Us A Message' variant='h3' sx={{ my: 6 }} /> */}
-      <ContactForm />
+      {/* <ContactForm /> */}
     </Box>
   )
 }

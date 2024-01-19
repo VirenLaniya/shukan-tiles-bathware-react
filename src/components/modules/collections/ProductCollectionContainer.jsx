@@ -27,11 +27,11 @@ const ProductCollectionContainer = ({ filter }) => {
     return (
         <Box sx={{ pb: 12 }}>
             <Container>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} md={4}>
+                <Grid container spacing={5}>
+                    <Grid item xs={12} md={3}>
                         <CollectionBox onChangeCollection={handleChangeCollection} currentCollection={currentCollection} />
                     </Grid>
-                    <Grid item xs={12} md={8}>
+                    <Grid item xs={12} md={9}>
                         <ProductsBox collectionId={currentCollection} filter={filter} />
                     </Grid>
                 </Grid>

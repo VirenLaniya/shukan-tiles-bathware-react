@@ -15,6 +15,10 @@ import { products } from '../../../data/products'
 import { search } from '../../../data/common'
 //#endregion
 
+//#region Helper Functions
+import getEllipsisText from '../../../utils/common/getEllipsisText'
+//#endregion
+
 const NotFound = () => {
     return (
         <Box sx={{ textAlign: 'center' }}>
@@ -34,12 +38,12 @@ const ProductsContainer = ({ collectionId, filter }) => {
     })
 
     return (
-        <Container maxWidth='md' sx={{ overflowY: 'scroll', "::-webkit-scrollbar": { display: 'none' } }}>
+        <Box sx={{ overflowY: 'scroll', "::-webkit-scrollbar": { display: 'none' } }}>
             {
                 filteredProducts.length > 0 ?
                     <ImageList sx={{ width: '100%', "::-webkit-scrollbar": { display: 'none' } }} cols={matchDownMd ? 2 : 3} gap={matchDownMd ? 8 : 24}>
                         {filteredProducts.map((product) => (
-                            <Link href='#' underline='none' sx={{ width: '100%' }} key={product.id}>
+                            <Link href='#' underline='none' sx={{ width: '100%' }} key={product.id} noWrap>
                                 <ImageListItem key={product.name} sx={{
                                     width: '100%',
                                     textAlign: 'center',
@@ -62,8 +66,7 @@ const ProductsContainer = ({ collectionId, filter }) => {
                                     <ImageListItemBar
                                         className='productItemBar'
                                         title={product.name}
-                                        subtitle={product.description}
-                                        // position="below"
+                                        position="below"
                                         sx={{
                                             p: 1,
                                             '.MuiImageListItemBar-title': {
@@ -76,7 +79,6 @@ const ProductsContainer = ({ collectionId, filter }) => {
                                             // borderLeft: `1px solid ${theme.palette.primary.main}`,
                                             // borderRight: `1px solid ${theme.palette.primary.main}`,
                                             // borderBottom: `1px solid ${theme.palette.primary.main}`,
-
                                             boxShadow: `rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;`,
                                             transition: 'all 0.4s ease'
                                         }}
@@ -88,7 +90,7 @@ const ProductsContainer = ({ collectionId, filter }) => {
                     :
                     <NotFound />
             }
-        </Container>
+        </Box>
     )
 }
 

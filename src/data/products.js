@@ -4,11 +4,9 @@ import design3 from '/assets/images/products/designs/design3.jpg'
 import design4 from '/assets/images/products/designs/design4.jpg'
 
 export const collections = [
-    { id: 1, title: "Minimo Collection" },
-    { id: 2, title: "Forza Collection" },
-    { id: 3, title: "Terrazzo Collection" },
-    { id: 4, title: "Altagloss Collection" },
-    { id: 5, title: "Kitchdeck Collection" }
+    { id: 1, title: "HDHMR Collection" },
+    { id: 2, title: "Slab Vanity Collection" },
+    { id: 3, title: "PVC Vanity Collection" }
 ]
 
 export const products = [
@@ -24,7 +22,7 @@ export const products = [
         name: "Ritz Wall Hung Basin dsds dds dsds dsds ",
         description: `A set of 60 hand-crafted, high quality tiles in`,
         image: design2,
-        collectionId: 2
+        collectionId: 1
     },
     {
         id: 3,
@@ -52,21 +50,21 @@ export const products = [
         name: "RANGER BEIGE",
         description: `A set of 60 hand-crafted, high quality tiles in`,
         image: design1,
-        collectionId: 4
+        collectionId: 1
     },
     {
         id: 7,
         name: "OROMO",
         description: `A set of 60 hand-crafted, high quality tiles in`,
         image: design2,
-        collectionId: 2
+        collectionId: 1
     },
     {
         id: 8,
         name: "RANGER GRIS",
         description: `A set of 60 hand-crafted, high quality tiles in`,
         image: design3,
-        collectionId: 5
+        collectionId: 2
     },
     {
         id: 9,
@@ -80,6 +78,6 @@ export const products = [
         name: "RUBY RUST",
         description: `A set of 60 hand-crafted, high quality tiles in`,
         image: design3,
-        collectionId: 3
+        collectionId: 1
     }
 ]

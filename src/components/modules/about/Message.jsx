@@ -65,14 +65,14 @@ const Introduction = () => {
                             <FadeRevealAnimation revealTime={1}>
                                 <Box>
                                     <FormatQuoteRoundedIcon sx={{color: theme.palette.secondary.main, transform: 'rotate(180deg)', fontSize: 60}} />
-                                    <Typography variant='h6' sx={{ color: theme.palette.primary.light, textTransform: 'uppercase', textAlign: 'center' }}>{introduction.subHeading}</Typography>
+                                    <Typography variant='h6' sx={{ color: theme.palette.primary.light, textTransform: 'uppercase', textAlign: 'center' }}>{message.quoteMessage}</Typography>
                                     <Typography sx={{textAlign: 'end'}}>
                                         <FormatQuoteRoundedIcon sx={{color: theme.palette.secondary.main, fontSize: 60}} />
                                     </Typography>
                                 </Box>
                             </FadeRevealAnimation>
                             <FadeRevealAnimation revealTime={fadeRevealTime + 0.1}>
-                                <Typography variant='p' sx={{ lineHeight: 2 }}>{introduction.description}</Typography>
+                                <SectionParagraph>{message.message}</SectionParagraph>
                             </FadeRevealAnimation>
                         </Box>
                     </Grid>

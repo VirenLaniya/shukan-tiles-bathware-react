@@ -30,7 +30,7 @@ export default function DiscoverCreations() {
                     discoverCreations.creations.map((creation, index) => {
                         return (
                             <FadeRevealAnimation key={index}>
-                                <CreationBox isImageFirst={(index + 1) % 2 != 0} imageUrl={creation.image} text={creation.title} />
+                                <CreationBox isImageFirst={(index + 1) % 2 != 0} imageUrl={creation.image} text={creation.title} description={creation.description} />
                             </FadeRevealAnimation>
                         )
                     })

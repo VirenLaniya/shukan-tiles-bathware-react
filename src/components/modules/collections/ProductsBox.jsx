@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react'
 
+//#region React Router Imports
+import { Link } from 'react-router-dom'
+//#endregion
+
 //#region MUI Imports
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box';
@@ -7,7 +11,8 @@ import Button from '@mui/material/Button'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { useTheme, useMediaQuery, Link, Typography, } from '@mui/material';
+import { useTheme, useMediaQuery, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 //#endregion
 
 //#region Data Imports
@@ -15,8 +20,18 @@ import { products } from '../../../data/products'
 import { search } from '../../../data/common'
 //#endregion
 
-//#region Helper Functions
-import getEllipsisText from '../../../utils/common/getEllipsisText'
+//#region Style Customization
+const CustomLink = styled(Link)(({ theme }) => ({
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    width: '100%',
+    textDecoration: 'none',
+    color: theme.palette.grey[600],
+    ':hover': {
+        color: theme.palette.primary.main
+    }
+}));
 //#endregion
 
 const NotFound = () => {
@@ -43,7 +58,7 @@ const ProductsContainer = ({ collectionId, filter }) => {
                 filteredProducts.length > 0 ?
                     <ImageList sx={{ width: '100%', "::-webkit-scrollbar": { display: 'none' } }} cols={matchDownMd ? 2 : 3} gap={matchDownMd ? 8 : 24}>
                         {filteredProducts.map((product) => (
-                            <Link href='#' underline='none' sx={{ width: '100%' }} key={product.id} noWrap>
+                            <CustomLink to={`/collection/product/${product.id}`} key={product.id}>
                                 <ImageListItem key={product.name} sx={{
                                     width: '100%',
                                     textAlign: 'center',
@@ -84,7 +99,7 @@ const ProductsContainer = ({ collectionId, filter }) => {
                                         }}
                                     />
                                 </ImageListItem>
-                            </Link>
+                            </CustomLink>
                         ))}
                     </ImageList>
                     :

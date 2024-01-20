@@ -79,7 +79,7 @@ const SearchFilterContainer = ({ onChangeSearch, filter }) => {
                         }}
                         fullWidth />
                     <Box>
-                        <Select
+                        {/* <Select
                             multiple
                             displayEmpty
                             value={filterState}
@@ -118,7 +118,7 @@ const SearchFilterContainer = ({ onChangeSearch, filter }) => {
                                     {collection.title}
                                 </MenuItem>
                             ))}
-                        </Select>
+                        </Select> */}
                     </Box>
                 </Box>
             </Container>

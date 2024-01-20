@@ -80,9 +80,9 @@ const ConnectButton = () => {
                 <Grow
                     in={!trigger || checked}
                     style={{ transformOrigin: '0 0 0' }}
-                    {...(checked ? { timeout: 500 } : {})}
+                    {...(checked ? { timeout: 1500 } : {})}
                 >
-                    <Link href={'mailto:'+getPlatformConnectLink('mail')} target='_blank'>
+                    <Link href={'mailto:' + getPlatformConnectLink('mail')} target='_blank'>
                         <IconButton sx={{ width: '42px', height: '42px', background: alpha(theme.palette.primary.main, 0.7), ':hover': { background: theme.palette.primary.main } }}>
                             <MailOutlineRoundedIcon sx={{ color: theme.palette.common.white }} />
                         </IconButton>

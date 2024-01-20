@@ -11,6 +11,12 @@ import quality from '/assets/images/about/fundamentals/quality.png'
 import culture from '/assets/images/about/fundamentals/culture.png'
 //#endregion
 
+//#region Group of Companies Imports
+import shukanCeramic from '/assets/images/about/companies/shukan-ceramic.png'
+import tilescapeSurfaces from '/assets/images/about/companies/tilescape-surfaces.png'
+import sezVitrified from '/assets/images/about/companies/sez-vitrified.png'
+//#endregion
+
 export const pageStarter = {
     title: 'About',
     background: background
@@ -37,6 +43,15 @@ export const fundamentals = [
         image: culture
     }
 ]
+
+export const groupOfCompanies = {
+    title: 'Our group of companies',
+    companies: [
+        { title: 'Shukan ceramic', image: shukanCeramic, link: '#' },
+        { title: 'Tilescape surfaces', image: tilescapeSurfaces, link: '#' },
+        { title: 'Sez vitrified', image: sezVitrified, link: '#' }
+    ]
+}
 
 export const missionVision = {
     mission: {

@@ -10,16 +10,20 @@ const CustomLink = styled(Link)(({ theme }) => ({
     color: theme.palette.text.secondary,
     transition: '0.3s',
     ':hover': {
-        color: theme.palette.primary.contrastText+"!important"
+        color: theme.palette.primary.contrastText + "!important"
     }
 }))
+
+//#region Helper Functions
+import getEllipsisText from '../../../utils/common/getEllipsisText'
+//#endregion
 
 const ContactItemContent = ({ contactItem, contactType }) => {
     switch (contactType) {
         case "email":
             const emailLink = `mailto:${contactItem}`
             return (
-                <CustomLink href={emailLink} underline="none">
+                <CustomLink href={emailLink} underline="none" noWrap>
                     {contactItem}
                 </CustomLink>
             )
@@ -65,10 +69,10 @@ const ContactDetailCard = ({ children, contact }) => {
                 color: theme => theme.palette.grey[400]
             },
             ':hover .card-heading': {
-                color: theme=>theme.palette.primary.contrastText
+                color: theme => theme.palette.primary.contrastText
             },
             ':hover .card-heading *': {
-                color: theme=>theme.palette.primary.contrastText
+                color: theme => theme.palette.primary.contrastText
             }
         }}>
             {/* <CardMedia
@@ -78,7 +82,7 @@ const ContactDetailCard = ({ children, contact }) => {
                     alt="green iguana"
                 /> */}
             <CardContent>
-                <Typography className='card-heading' gutterBottom variant="h5" component="div" sx={{ letterSpacing: 3, display: 'flex', alignItems: 'center'}}>
+                <Typography className='card-heading' gutterBottom variant="h5" component="div" sx={{ letterSpacing: 3, display: 'flex', alignItems: 'center' }}>
                     <contact.icon sx={{ mr: 1 }} /> {contact.title}
                 </Typography>
                 {

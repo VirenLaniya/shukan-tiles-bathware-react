@@ -17,25 +17,25 @@ export const contactInformation = {
     information: [
         {
             title: 'Address',
-            content: ['501, Aaryan Workspaces, ST.Xaviers College Corner, Hotel Klassic Gold Road, Navrangpura, Ahmedabad - 380009.'],
+            content: ['SHUKAN BATHWARE, Khokhara Hanuman Road, Opp. Monolith Surface LLP., Morbi 363 642,Gujarat (India)'],
             type: 'address',
             icon: LocationCityRoundedIcon
         },
         {
             title: "Let's Talk",
-            content: ['+91 1234567890', '+91 1237894560', '+91 1597538246'],
+            content: ['+91 9662788188', '+91 9537255155'],
             type: 'mobile',
             icon: HeadsetMicRoundedIcon
         },
         {
             title: 'Website',
-            content: ['www.google.com', 'www.facebook.com'],
+            content: ['www.shukanbathware.com'],
             type: 'website',
             icon: LanguageRoundedIcon
         },
         {
             title: 'Email',
-            content: ['virenlaniya.developer@gmail.com', 'virenlaniya.developer@gmail.com'],
+            content: ['info@shukanbathware.com', 'sarvesh.kundariya@shukanbathware.com'],
             type: 'email',
             icon: EmailRoundedIcon
         }

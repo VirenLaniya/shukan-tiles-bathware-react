@@ -13,6 +13,16 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import LanRoundedIcon from '@mui/icons-material/LanRounded';
+import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
+//#endregion
+
+//#region Data Imports
+import { connect } from '../../../data/common'
+//#endregion
+
+
+//#region Helper functions
+import getPlatformConnectLink from '../../../utils/helper/getPlatformConnectLink'
 //#endregion
 
 const ConnectButton = () => {
@@ -37,20 +47,20 @@ const ConnectButton = () => {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', rowGap: 1 }}>
             <Box sx={{ position: !trigger ? 'fixed' : 'static', display: 'flex', flexDirection: 'column-reverse', justifyContent: 'center', alignItems: 'center', rowGap: 1 }}>
-                <Grow in={!trigger || checked}>
-                    <Link href='#'>
+                {/* <Grow in={!trigger || checked}>
+                    <Link href={getPlatformConnectLink('facebook')} target='_blank'>
                         <IconButton sx={{ width: '42px', height: '42px', background: alpha(facebookColor, 0.7), ':hover': { background: facebookColor } }}>
                             <FacebookRoundedIcon sx={{ color: theme.palette.common.white }} />
                         </IconButton>
                     </Link>
-                </Grow>
+                </Grow> */}
                 {/* Conditionally applies the timeout prop to change the entry speed. */}
                 <Grow
                     in={!trigger || checked}
                     style={{ transformOrigin: '0 0 0' }}
                     {...(checked ? { timeout: 500 } : {})}
                 >
-                    <Link href='#'>
+                    <Link href={getPlatformConnectLink('instagram')} target='_blank'>
                         <IconButton sx={{ width: '42px', height: '42px', background: alpha(instagramColor, 0.7), ':hover': { background: instagramColor } }}>
                             <InstagramIcon sx={{ color: theme.palette.common.white }} />
                         </IconButton>
@@ -61,9 +71,20 @@ const ConnectButton = () => {
                     style={{ transformOrigin: '0 0 0' }}
                     {...(checked ? { timeout: 1000 } : {})}
                 >
-                    <Link href='#'>
+                    <Link href={getPlatformConnectLink('whatsapp')} target='_blank'>
                         <IconButton sx={{ width: '42px', height: '42px', background: alpha(whatsAppColor, 0.7), ':hover': { background: whatsAppColor } }}>
                             <WhatsAppIcon sx={{ color: theme.palette.common.white }} />
+                        </IconButton>
+                    </Link>
+                </Grow>
+                <Grow
+                    in={!trigger || checked}
+                    style={{ transformOrigin: '0 0 0' }}
+                    {...(checked ? { timeout: 1500 } : {})}
+                >
+                    <Link href={'mailto:' + getPlatformConnectLink('mail')} target='_blank'>
+                        <IconButton sx={{ width: '42px', height: '42px', background: alpha(theme.palette.primary.main, 0.7), ':hover': { background: theme.palette.primary.main } }}>
+                            <MailOutlineRoundedIcon sx={{ color: theme.palette.common.white }} />
                         </IconButton>
                     </Link>
                 </Grow>

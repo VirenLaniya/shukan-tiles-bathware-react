@@ -7,7 +7,7 @@ import { Typography } from '@mui/material'
 const SectionParagraph = ({ children, sx }) => {
     sx = sx ?? {}
     return (
-        <Typography variant='p' sx={{ lineHeight: 2, ...sx }}>{children}</Typography>
+        <Typography variant='p' sx={{ lineHeight: 2, display: 'block', whiteSpace: 'pre-wrap', ...sx }}>{children}</Typography>
     )
 }
 

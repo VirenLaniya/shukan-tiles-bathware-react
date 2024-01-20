@@ -24,7 +24,7 @@ const Map = () => {
             <Container>
                 <FadeRevealAnimation>
                     <Box>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.7416879319762!2d72.5547589743842!3d23.03325481593119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f215c46eed%3A0x332c4f6cf6a587d0!2sMittal%20Exports!5e0!3m2!1sen!2sin!4v1700667410910!5m2!1sen!2sin" style={{ width: '100%', height: '400px', border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.9151424665256!2d70.85066911022213!3d22.90989429895032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39598b7331d68dd7%3A0x5c59fec263497905!2sMONOLITH%20SURFACES%20LLP!5e0!3m2!1sen!2sin!4v1705682696805!5m2!1sen!2sin" style={{ width: '100%', height: '400px', border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </Box>
                 </FadeRevealAnimation>
             </Container>

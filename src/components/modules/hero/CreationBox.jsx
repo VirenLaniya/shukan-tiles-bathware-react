@@ -6,6 +6,8 @@ import Typography from "@mui/material/Typography"
 import { useTheme } from "@mui/material/styles";
 //#endregion
 
+import '../common/styles/IsometricBackground.css'
+
 const CreationBox = ({ isImageFirst, imageUrl, text }) => {
     const theme = useTheme();
 
@@ -14,12 +16,12 @@ const CreationBox = ({ isImageFirst, imageUrl, text }) => {
             sx={{
                 position: 'relative',
                 display: 'flex',
-                height: '400px',
+                height: { xs: '300px', md: '400px' },
                 flexDirection: isImageFirst ? 'row-reverse' : 'row',
                 justifyContent: 'start',
                 alignItems: 'center',
             }}>
-            <Box sx={{
+            <Box className='isometric-bg' sx={{
                 display: {
                     xs: 'none',
                     md: 'flex'
@@ -36,7 +38,7 @@ const CreationBox = ({ isImageFirst, imageUrl, text }) => {
                 // borderColor: theme.palette.secondary.main
             }}>
                 {/* <Box sx={{ padding: 2, width: '100%', height: '100%', backgroundColor: theme.palette.common.white}}> */}
-                    <Typography variant='h3' sx={{
+                    <Typography variant='h4' sx={{
                         // width: '100%',
                         padding: 6,
                         fontWeight: '500',
@@ -46,7 +48,7 @@ const CreationBox = ({ isImageFirst, imageUrl, text }) => {
                         textTransform: 'uppercase',
                         border: '4px solid',
                         borderColor: theme.palette.primary.main,
-                        // backgroundColor: theme.palette.common.white
+                        backgroundColor: theme.palette.background.paper
                     }}>{text}</Typography>
                 {/* </Box> */}
             </Box>
@@ -63,7 +65,7 @@ const CreationBox = ({ isImageFirst, imageUrl, text }) => {
                 py: 2,
                 zIndex: 2,
                 backgroundColor: theme.palette.primary.main,
-                color: theme.palette.secondary.main
+                color: theme.palette.primary.contrastText
             }}>
                 {text}
             </Box>

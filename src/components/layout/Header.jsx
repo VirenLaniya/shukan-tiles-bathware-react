@@ -156,7 +156,7 @@ const Header = (props) => {
       <CssBaseline />
       {/* <ElevationScroll {...props}> */}
       <HideOnScroll {...props}>
-        <AppBar sx={{backgroundColor: theme.palette.background.default}}>
+        <AppBar sx={{ backgroundColor: theme.palette.background.default }}>
           <Container maxWidth="xl">
             <Toolbar sx={{ justifyContent: 'space-between', height: '90px' }} disableGutters>
               <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center' }}>
@@ -167,7 +167,7 @@ const Header = (props) => {
                   aria-haspopup="true"
                   onClick={toggleMenuDrawer(true)}
                   color="inherit"
-                  sx={{color: theme.palette.primary.main}}
+                  sx={{ color: theme.palette.primary.main }}
                 >
                   <MenuIcon fontSize='inherit' />
                 </IconButton>
@@ -179,7 +179,7 @@ const Header = (props) => {
 
               <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', columnGap: '24px' }}>
                 {pages.map((page, index) => (
-                  <CustomNavLink to={page.path} className='header-link' key={index} sx={{ color: theme.palette.grey[700], '::after': { backgroundColor: theme.palette.grey[700] } }}>{page.title}</CustomNavLink>
+                  <CustomNavLink to={page.path} className='header-link' key={index} sx={{ fontSize: { xs: 18, md: 17 }, color: theme.palette.grey[700], '::after': { backgroundColor: theme.palette.grey[700] } }}>{page.title}</CustomNavLink>
                 ))}
               </Box>
 
@@ -204,7 +204,6 @@ const Header = (props) => {
           <KeyboardArrowUpIcon sx={{ color: theme => theme.palette.primary.main }} />
         </Fab>
       </ScrollTop>
-
     </>
   );
 }

@@ -63,7 +63,7 @@ export default function SearchDrawer({ toggleSearchDrawer, searchDrawerState }) 
                 </Box>
             </Container>
 
-            <SearchResult searchText={searchText} />
+            <SearchResult searchText={searchText} toggleSearchDrawer={toggleSearchDrawer} />
 
         </Box>
     );

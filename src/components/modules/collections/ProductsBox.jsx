@@ -11,16 +11,27 @@ import Button from '@mui/material/Button'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { useTheme, useMediaQuery, Typography, } from '@mui/material';
-//#endregion
-
-//#region Component Imports
-import { getCollectionById } from '../../utils/helper/productCollectionHelper';
+import { useTheme, useMediaQuery, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 //#endregion
 
 //#region Data Imports
-import { products } from '../../data/products'
-import { search } from '../../data/common'
+import { products } from '../../../data/products'
+import { search } from '../../../data/common'
+//#endregion
+
+//#region Style Customization
+const CustomLink = styled(Link)(({ theme }) => ({
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    width: '100%',
+    textDecoration: 'none',
+    color: theme.palette.grey[600],
+    ':hover': {
+        color: theme.palette.primary.main
+    }
+}));
 //#endregion
 
 const NotFound = () => {
@@ -31,20 +42,23 @@ const NotFound = () => {
     )
 }
 
-const SearchResult = ({ searchText, toggleSearchDrawer }) => {
+const ProductsContainer = ({ collectionId, filter }) => {
 
     const theme = useTheme();
     const matchDownMd = useMediaQuery(theme.breakpoints.down('sm'));
 
-    const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchText.toLowerCase()))
+    filter = filter ?? { searchText: '', filterBy: '' }
+    const filteredProducts = products.filter(product => {
+        return product.name.toLowerCase().includes(filter.searchText.toLowerCase()) && product.collectionId == collectionId
+    })
 
     return (
-        <Container maxWidth='md' sx={{ overflowY: 'scroll', "::-webkit-scrollbar": { display: 'none' } }}>
+        <Box sx={{ overflowY: 'scroll', "::-webkit-scrollbar": { display: 'none' } }}>
             {
                 filteredProducts.length > 0 ?
                     <ImageList sx={{ width: '100%', "::-webkit-scrollbar": { display: 'none' } }} cols={matchDownMd ? 2 : 3} gap={matchDownMd ? 8 : 24}>
                         {filteredProducts.map((product) => (
-                            <Link key={product.id} to={`/collection/product/${product.id}`} underline='none' sx={{ width: '100%' }}>
+                            <CustomLink to={`/collection/product/${product.id}`} key={product.id}>
                                 <ImageListItem key={product.name} sx={{
                                     width: '100%',
                                     textAlign: 'center',
@@ -67,8 +81,7 @@ const SearchResult = ({ searchText, toggleSearchDrawer }) => {
                                     <ImageListItemBar
                                         className='productItemBar'
                                         title={product.name}
-                                        subtitle={getCollectionById(product.collectionId).title}
-                                        // position="below"
+                                        position="below"
                                         sx={{
                                             p: 1,
                                             '.MuiImageListItemBar-title': {
@@ -81,20 +94,19 @@ const SearchResult = ({ searchText, toggleSearchDrawer }) => {
                                             // borderLeft: `1px solid ${theme.palette.primary.main}`,
                                             // borderRight: `1px solid ${theme.palette.primary.main}`,
                                             // borderBottom: `1px solid ${theme.palette.primary.main}`,
-
                                             boxShadow: `rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;`,
                                             transition: 'all 0.4s ease'
                                         }}
                                     />
                                 </ImageListItem>
-                            </Link>
+                            </CustomLink>
                         ))}
                     </ImageList>
                     :
                     <NotFound />
             }
-        </Container>
+        </Box>
     )
 }
 
-export default SearchResult
+export default ProductsContainer

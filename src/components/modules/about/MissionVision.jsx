@@ -2,6 +2,7 @@ import React from 'react'
 
 //#region MUI Imports
 import { Box, Container, Typography, Grid } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 //#endregion
 
 //#region Component Imports
@@ -16,8 +17,11 @@ import { missionVision } from '../../../data/about'
 //#endregion
 
 const MissionVision = () => {
+
+    const theme = useTheme();
+
     return (
-        <CustomSection>
+        <CustomSection sx={{backgroundColor: theme.palette.background.default }}>
             <Container>
                 <Grid container spacing={10}>
                     <Grid item xs={12} md={6}>

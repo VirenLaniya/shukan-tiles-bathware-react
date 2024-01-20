@@ -23,6 +23,7 @@ import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import MailOutlineRounded from '@mui/icons-material/MailOutlineRounded';
 //#endregion
 
 //#region Data Imports
@@ -56,6 +57,8 @@ const Connect = (platform, link, index) => {
                 return <InstagramIcon sx={{ fontSize: iconFontSize }} />
             case "whatsapp":
                 return <WhatsAppIcon sx={{ fontSize: iconFontSize }} />
+            case "mail": 
+                return <MailOutlineRounded sx={{ fontSize: iconFontSize }} />
             default:
                 return;
         }

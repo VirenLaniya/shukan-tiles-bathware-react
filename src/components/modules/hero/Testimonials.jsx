@@ -58,22 +58,28 @@ function slideRenderer(params) {
     } = params;
     let testimonial;
 
-    switch (mod(index, 3)) {
-        case 0:
-            testimonial = testimonials[0];
-            break;
+    // switch (mod(index, 4)) {
+    //     case 0:
+    //         testimonial = testimonials[0];
+    //         break;
 
-        case 1:
-            testimonial = testimonials[1];
-            break;
+    //     case 1:
+    //         testimonial = testimonials[1];
+    //         break;
 
-        case 2:
-            testimonial = testimonials[2];
-            break;
+    //     case 2:
+    //         testimonial = testimonials[2];
+    //         break;
 
-        default:
-            break;
-    }
+    //     case 3:
+    //         testimonial = testimonials[3];
+    //         break;
+
+    //     default:
+    //         break;
+    // }
+
+    testimonial = testimonials[mod(index, testimonials.length)]
 
     return (
         <Testimonial key={key} testimonial={testimonial} />
@@ -113,7 +119,7 @@ const Testimonials = () => {
     const [index, setIndex] = useState(0);
 
     const handleChangeIndex = (newIndex) => {
-        setIndex(mod(newIndex, 3));
+        setIndex(mod(newIndex, testimonials.length));
     };
 
     return (

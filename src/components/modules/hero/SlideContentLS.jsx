@@ -1,8 +1,12 @@
-import React from 'react'
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from 'react'
+
+//#region React Router Imports
+import { Link } from 'react-router-dom';
+//#endregion
+
 import { useAnimate, useInView, usePresence } from "framer-motion";
-import { Box, Button, CardContent, Typography } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { Box, Button, CardContent, Typography, useMediaQuery, useTheme } from '@mui/material'
+
 import LineDrawingEffect from './LineDrawingEffect';
 import NoiseGlitchText from '../common/NoiseGlitchText';
 import PrimaryButton from '../common/PrimaryButton';
@@ -11,6 +15,10 @@ import ResponsiveButton from '../../../utils/mui-helper/responsiveButtonSize';
 const SlideContentLS = ({ slide }) => {
     const ref = useRef(null);
     const isInView = useInView(ref);
+    const theme = useTheme();
+
+    const mediumTab = useMediaQuery(theme.breakpoints.up("md"));
+    const mobile = useMediaQuery(theme.breakpoints.up("xs"));
 
     return (
         <CardContent ref={ref}>
@@ -18,24 +26,27 @@ const SlideContentLS = ({ slide }) => {
                 <LineDrawingEffect isInView={isInView} />
             </Box> */}
             <Box>
-                <Typography variant='h4' sx={{
+                <Typography variant={mediumTab ? 'h4' : 'h5'} sx={{
                     mb: { xs: 1.5, md: 2 },
-                    color: (theme) => theme.palette.grey[700],
+                    color: theme.palette.grey[700],
                     fontWeight: 500
                 }}>{slide.description}</Typography>
 
-                <Typography variant='h2' sx={{
+                <Typography variant={mediumTab ? 'h2' : 'h3'} sx={{
                     mb: { xs: 2, md: 5 },
-                    color: (theme) => theme.palette.primary.main,
+                    color: theme.palette.primary.main,
                     textTransform: 'uppercase',
                     letterSpacing: 8,
                     fontWeight: 500
                 }}>{slide.title}</Typography>
 
-                {/* <Button variant='contained' size='large'>Know About Us</Button> */}
-                <Button variant='contained' size={ResponsiveButton('medium')}>Know About Us</Button>
-                {/* <Button variant='outlined' size={ResponsiveButton('medium')}>Know About Us</Button> */}
-                {/* <Button variant='contained' size='small'>Know About Us</Button> */}
+                {
+                    slide.buttonText &&
+                    <Link to={slide.buttonLink}>
+                        <Button variant='contained' size={ResponsiveButton('medium')}>{slide.buttonText}</Button>
+                    </Link>
+                }
+
             </Box>
         </CardContent >
     )

@@ -102,6 +102,7 @@ const FooterInput = styled(OutlinedInput)(({ theme }) => ({
 //#endregion
 
 //#region Helper Functions
+
 const GetIcon = (iconFor) => {
     const text = iconFor.toLowerCase();
     if (text.startsWith('address')) {

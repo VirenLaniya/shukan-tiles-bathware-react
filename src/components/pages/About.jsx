@@ -5,6 +5,7 @@ import { pageStarter } from '../../data/about'
 // import ImageGallery from '../modules/about/ImageGallery'
 import IntroSection from '../modules/about/IntroSection'
 import Fundamentals from '../modules/about/Fundamentals'
+import GroupOfCompanies from '../modules/about/GroupOfCompanies'
 import MadeInIndia from '../modules/about/MadeInIndia'
 import MissionVision from '../modules/about/MissionVision'
 import Message from '../modules/about/Message'
@@ -15,6 +16,7 @@ const About = () => {
       <PageStarter background={pageStarter.background} title={pageStarter.title} />
       {/* <ImageGallery /> */}
       <IntroSection />
+      <GroupOfCompanies />
       <Fundamentals />
       <MissionVision />
       <Message />

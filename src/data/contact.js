@@ -23,13 +23,13 @@ export const contactInformation = {
         },
         {
             title: "Let's Talk",
-            content: ['+91 9662788188', '+91 9537255155'],
+            content: ['Care : +91 9662788188', 'Export : +91 9537255155'],
             type: 'mobile',
             icon: HeadsetMicRoundedIcon
         },
         {
             title: 'Website',
-            content: ['www.shukanbathware.com'],
+            content: ['www.shukanbathware.com', 'www.shukanceramic.com', 'www.tilescape.in'],
             type: 'website',
             icon: LanguageRoundedIcon
         },

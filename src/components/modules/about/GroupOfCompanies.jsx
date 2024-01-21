@@ -23,7 +23,7 @@ const GroupOfCompanies = () => {
     return (
         <CustomSection>
             <SectionTitle title={groupOfCompanies.title} />
-            <Container maxWidth='md' sx={{
+            <Container maxWidth='sm' sx={{
                 // py: 10,
                 display: 'flex',
                 flexDirection: { xs: 'column', md: 'row' },
@@ -34,29 +34,29 @@ const GroupOfCompanies = () => {
                 {
                     groupOfCompanies.companies.map((item, index) => {
                         return (
-                            <Link href={item.link} underline='none' sx={{ width: '100%', height: '100%' }}>
-                                <Box sx={{
-                                    py: { xs: 8, md: 0 },
-                                    width: '100%',
-                                    height: '100%',
-                                    // borderRight: { xs: 'none', md: index < (fundamentals.length - 1) ? '1px solid' : 'none' },
-                                    // borderBottom: { xs: index < (fundamentals.length - 1) ? '1px solid' : 'none', md: 'none' },
-                                    borderColor: theme.palette.primary.main,
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                    justifyContent: 'center'
-                                }} key={index}>
-                                    <FadeRevealAnimation>
-                                        <Box sx={{ width: 64, height: 'auto' }}>
+                            <Box sx={{
+                                py: { xs: 8, md: 0 },
+                                width: '100%',
+                                height: '100%',
+                                // borderRight: { xs: 'none', md: index < (fundamentals.length - 1) ? '1px solid' : 'none' },
+                                // borderBottom: { xs: index < (fundamentals.length - 1) ? '1px solid' : 'none', md: 'none' },
+                                borderColor: theme.palette.primary.main,
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            }} key={index}>
+                                <FadeRevealAnimation>
+                                    <Link href={item.link} underline='none' sx={{ width: '100%', height: '100%' }}>
+                                        <Box sx={{ width: 128, height: 'auto' }}>
                                             <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                         </Box>
-                                    </FadeRevealAnimation>
-                                    <FadeRevealAnimation>
+                                    </Link>
+                                </FadeRevealAnimation>
+                                {/* <FadeRevealAnimation>
                                         <Typography variant='h6' sx={{ color: theme.palette.secondary.contrastText, fontWeight: '500' }}>{item.title}</Typography>
-                                    </FadeRevealAnimation>
-                                </Box>
-                            </Link>
+                                    </FadeRevealAnimation> */}
+                            </Box>
                         )
                     })
                 }

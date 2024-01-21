@@ -52,14 +52,14 @@ const Introduction = () => {
                                         <Button variant='outlined' sx={{ px: 4, py: 2, fontSize: '16px' }}>{introduction.discoverMore}</Button>
                                     </Link>
                                 </Box>
-                                <Divider orientation="vertical" flexItem sx={{
+                                {/* <Divider orientation="vertical" flexItem sx={{
                                     backgroundColor: theme.palette.primary.light,
                                     width: 2,
                                     borderRadius: 8
                                 }} />
                                 <Box sx={{ py: 2, textTransform: 'uppercase', letterSpacing: 4, fontWeight: '600' }}>Since
                                     <Typography sx={{ color: theme.palette.primary.light, fontWeight: '700', fontSize: '18px' }}>{since}</Typography>
-                                </Box>
+                                </Box> */}
                             </Box>
                         </FadeRevealAnimation>
                     </Box>

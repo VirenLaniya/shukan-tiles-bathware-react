@@ -39,6 +39,7 @@ import {
     footerContact,
     footerCopyright
 } from '../../data/common';
+import { groupOfCompanies } from '../../data/about';
 //#endregion
 
 //#region Style Customization
@@ -190,9 +191,9 @@ const Footer = () => {
                                 </Grid>
                             </Box>
                         </Grid>
-                        <Grid item xs={12} md={6} lg={3}>
+                        {/* <Grid item xs={12} md={6} lg={3}>
                             <Box>
-                                <FooterHeading variant='h5'>News Letter</FooterHeading>
+                                <FooterHeading variant='h5'>Our Group</FooterHeading>
                                 <Divider sx={{ backgroundColor: (theme) => theme.palette.secondary.main, my: 3 }} />
                                 <Box>
                                     <FooterInput
@@ -204,13 +205,32 @@ const Footer = () => {
                                                     aria-label="toggle password visibility"
                                                     edge="end"
                                                 >
-                                                    <MailRoundedIcon className='adornment-button' sx={{ color: footerText,  }} />
+                                                    <MailRoundedIcon className='adornment-button' sx={{ color: footerText, }} />
                                                 </IconButton>
                                             </InputAdornment>
                                         }
                                         sx={{ width: '100%', mb: 3 }}
                                     />
                                     <Typography variant='body2' sx={{ color: (theme) => alpha(theme.palette.primary.contrastText, 0.6), lineHeight: 2 }}>{footerNewsLetter.description}</Typography>
+                                </Box>
+                            </Box>
+                        </Grid> */}
+                        <Grid item xs={12} md={6} lg={3}>
+                            <Box>
+                                <FooterHeading variant='h5'>Our Group</FooterHeading>
+                                <Divider sx={{ backgroundColor: (theme) => theme.palette.secondary.main, my: 3 }} />
+                                <Box sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: 4 }}>
+                                    {
+                                        groupOfCompanies.companies.map(companyItem => {
+                                            return (
+                                                <MuiLink key={companyItem.title} href={companyItem.link} underline='none'>
+                                                    <Box sx={{ width: 48, height: 'auto' }}>
+                                                        <img src={companyItem.image} alt={companyItem.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                                                    </Box>
+                                                </MuiLink>
+                                            )
+                                        })
+                                    }
                                 </Box>
                             </Box>
                         </Grid>

@@ -88,7 +88,8 @@ let Theme = createTheme({
     secondary: secondaryPalette,
     background: {
       default: '#ffffff',
-      paper: '#fcf7e9'
+      // paper: '#fcf7e9'
+      paper: defaultTheme.palette.grey[100]
     }
   },
 

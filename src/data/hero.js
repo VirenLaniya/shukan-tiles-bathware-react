@@ -76,15 +76,18 @@ export const discoverCreations = {
     creations: [
         {
             title: 'HDHMR',
-            image: creationImage1
+            image: creationImage1,
+            description: "Elevate your bathroom with Shukan's HDHMR Collection – a perfect fusion of durability and style, redefining modern bath spaces."
         },
         {
             title: 'Slab Vanity',
-            image: creationImage2
+            image: creationImage2,
+            description: "Transform your bathroom into a haven of modern sophistication with Shukan's Slab Vanity Collection – where clean lines meet timeless design."
         },
         {
             title: 'PVC Vanity',
-            image: creationImage3
+            image: creationImage3,
+            description: "Discover practical luxury with Shukan's PVC Vanity Collection – marrying functionality and style for a redefined bathroom experience."
         }
     ]
 }

@@ -46,20 +46,20 @@ const IntroSection = () => {
                                 <SectionParagraph>{introduction.description}</SectionParagraph>
                             </FadeRevealAnimation>
                             <FadeRevealAnimation revealTime={fadeRevealTime + 0.2}>
-                                <Box sx={{ display: 'flex', columnGap: 5, alignItems: 'center' }}>
+                                <Box sx={{ display: 'flex', columnGap: 5, justifyContent: { xs: 'center', md: 'flex-start' }, alignItems: 'center' }}>
                                     <Box sx={{ width: '128px' }}>
                                         {/* <Link to={pages.filter(page => page.title === 'Products')[0].path}> */}
                                         <img src={madeInIndia.symbol} alt='Make In India' style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
                                         {/* </Link> */}
                                     </Box>
-                                    <Divider orientation="vertical" flexItem sx={{
+                                    {/* <Divider orientation="vertical" flexItem sx={{
                                         backgroundColor: (theme) => theme.palette.secondary.main,
                                         width: 2,
                                         borderRadius: 8
                                     }} />
                                     <Box sx={{ textTransform: 'uppercase', letterSpacing: 4, fontWeight: '600' }}>Since
                                         <Typography sx={{ color: (theme) => theme.palette.primary.light, fontWeight: '700', fontSize: '18px' }}>{since}</Typography>
-                                    </Box>
+                                    </Box> */}
                                 </Box>
                             </FadeRevealAnimation>
                         </Box>

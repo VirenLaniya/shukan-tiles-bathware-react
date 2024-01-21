@@ -2,7 +2,7 @@ import logo from '/assets/common/company-logo.jpg'
 import logo2 from '/assets/common/company-logo-2.jpg'
 
 export const companyName = 'Shukan'
-export const since = '1960'
+export const since = '2006'
 export const companyLogo = logo
 export const fadeRevealTime = 0.4
 
@@ -30,7 +30,7 @@ export const connect =  [
     // },
     {
         platform: 'whatsapp',
-        link: 'https://wa.me/919662788188'
+        link: 'https://wa.me/919537255155'
     },
     {
         platform: 'instagram',
@@ -50,23 +50,23 @@ export const connect =  [
 //#region Footer
 export const footerCompany = {
     logo: logo2,
-    about: 'We are "Shukan", a company that specialises in the manufacture, supply and export of Tiles and Bathware products. We would like to introduce ourselves to you as we wish to do business in India and require your help in this',
+    about: "Hello from 'Shukan'! We're all about crafting exceptional bathware ceramics. Specializing in manufacturing, supplying, and exporting, we're eager to explore business opportunities in India. Your assistance would mean the world to us. Let's embark on this exciting journey together!",
     connect: [
         {
             platform: 'facebook',
-            link: 'https://www.google.com'
+            link: 'https://www.facebook.com/'
         },
         {
             platform: 'whatsapp',
-            link: 'https://www.google.com'
+            link: 'https://wa.me/919537255155'
         },
         {
             platform: 'instagram',
-            link: 'https://www.google.com',
+            link: 'https://www.instagram.com/sarvesh_shukan_bathware?igsh=MWllb3JjYzlzaG5oNQ==',
         },
         {
             platform: 'linkedin',
-            link: 'https://www.google.com',
+            link: 'https://www.linkedin.com/',
         }
     ]
 }
@@ -83,25 +83,26 @@ export const footerContact = {
         link: ''
     },
     mobile1: {
-        text: '+91 9662788188',
+        text: 'Customer Care : +91 9662788188',
         link: '+91 9662788188'
     },
     mobile2: {
-        text: '+91 9537255155',
+        text: 'Export : +91 9537255155',
         link: '+91 9537255155'
     },
     email1: {
         text: 'info@shukanbathware.com',
         link: 'info@shukanbathware.com'
     },
-    email2: {
-        text: 'sarvesh.kundariya@-shukanbathware.com',
-        link: 'sarvesh.kundariya@shukanbathware.com'
-    }
+    // email2: {
+    //     text: 'Export : sarvesh.kundariya@-shukanbathware.com',
+    //     link: 'sarvesh.kundariya@shukanbathware.com'
+    // }
 }
 
+const date = new Date();
 export const footerCopyright = {
-    copyrightText: 'Copyright © 2023 by Shukan. All Rights Reserved.'
+    copyrightText: `Copyright © ${date.getFullYear()} by Shukan. All Rights Reserved.`
 }
 //#endregion
 

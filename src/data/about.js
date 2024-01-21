@@ -45,7 +45,7 @@ export const fundamentals = [
 ]
 
 export const groupOfCompanies = {
-    title: 'Our group of companies',
+    title: 'Group of companies',
     companies: [
         { title: 'Shukan ceramic', image: shukanCeramic, link: 'https://www.shukanceramic.com/' },
         { title: 'Tilescape surfaces', image: tilescapeSurfaces, link: 'https://tilescape.in/' },

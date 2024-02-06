@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 //#region React Router Imports
 import { useParams } from 'react-router-dom'
@@ -16,6 +16,12 @@ import ProductContentSection from '../modules/product/ProductContentSection';
 const Product = () => {
 
   const { id } = useParams();
+
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
+
   return (
     <Box>
       <ProductHeadSection productId={id} />

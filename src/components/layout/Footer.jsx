@@ -256,7 +256,7 @@ const Footer = () => {
                                             }
                                             return (
                                                 <Grid item xs={12} key={index}>
-                                                    <FooterContactLink href={contactLink()} sx={{ display: 'flex', columnGap: 2 }}>
+                                                    <FooterContactLink href={contactLink()} target='_blank' sx={{ display: 'flex', columnGap: 2 }}>
                                                         {GetIcon(key)}
                                                         {footerContact[key].text}
                                                     </FooterContactLink>

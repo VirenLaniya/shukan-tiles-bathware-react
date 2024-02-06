@@ -15,7 +15,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { styled, useTheme } from '@mui/material';
+import { Link as MuiLink } from '@mui/material';
+import { styled, useTheme } from '@mui/material/styles';
 //#endregion
 
 //#region MUI Icon Imports
@@ -57,19 +58,28 @@ const Connect = (platform, link, index) => {
                 return <InstagramIcon sx={{ fontSize: iconFontSize }} />
             case "whatsapp":
                 return <WhatsAppIcon sx={{ fontSize: iconFontSize }} />
-            case "mail": 
+            case "mail":
                 return <MailOutlineRounded sx={{ fontSize: iconFontSize }} />
             default:
                 return;
         }
     }
 
+    const platformLink = (link, platform) => {
+        switch (platform) {
+            case 'mail':
+                return `mailto:${link}`;
+            default:
+                return link;
+        }
+    }
+
     return (
-        <Link href={link} target="_blank" key={index}>
+        <MuiLink href={platformLink(link, platform)} target="_blank" key={index}>
             <IconButton aria-label={platform} color="primary" sx={{ width: '50px', height: '50px' }}>
                 {icon()}
             </IconButton>
-        </Link>
+        </MuiLink>
     )
 }
 //#endregion

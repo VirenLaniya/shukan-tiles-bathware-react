@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box, Typography } from '@mui/material'
 import PageStarter from '../modules/common/PageStarter'
 import ContactForm from '../modules/contact/ContactForm'
@@ -8,6 +8,12 @@ import Map from '../modules/contact/Map'
 import { pageStarter } from '../../data/contact'
 
 const Contact = () => {
+
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
+
   return (
     <Box>
       <PageStarter background={pageStarter.background} title={pageStarter.title}/>

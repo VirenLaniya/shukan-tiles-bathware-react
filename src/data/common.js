@@ -1,6 +1,10 @@
 import logo from '/assets/common/company-logo.jpg'
 import logo2 from '/assets/common/company-logo-2.jpg'
 
+//#region Pages
+import { collections } from './products'
+//#endregion
+
 export const companyName = 'Shukan'
 export const since = '2006'
 export const companyLogo = logo
@@ -9,21 +13,22 @@ export const fadeRevealTime = 0.4
 export const pages = [{
     path: '/',
     title: 'Home'
-}, 
+},
 {
     path: '/about',
     title: 'About'
-}, 
+},
 {
     path: '/collection',
-    title: 'Collection'
+    title: 'Collection',
+    links: [...collections]
 },
 {
     path: '/contact',
     title: 'Contact'
 }];
 
-export const connect =  [
+export const connect = [
     // {
     //     platform: 'facebook',
     //     link: 'https://www.google.com'
@@ -34,7 +39,7 @@ export const connect =  [
     },
     {
         platform: 'instagram',
-        link: 'https://www.instagram.com/sarvesh_shukan_bathware?igsh=MWllb3JjYzlzaG5oNQ==',
+        link: 'https://www.instagram.com/shukan_bathware?igsh=NzR2YXA0c2g3OTY1',
     },
     // {
     //     platform: 'linkedin',
@@ -62,7 +67,7 @@ export const footerCompany = {
         },
         {
             platform: 'instagram',
-            link: 'https://www.instagram.com/sarvesh_shukan_bathware?igsh=MWllb3JjYzlzaG5oNQ==',
+            link: 'https://www.instagram.com/shukan_bathware?igsh=NzR2YXA0c2g3OTY1',
         },
         // {
         //     platform: 'linkedin',
@@ -84,7 +89,7 @@ export const footerNewsLetter = {
 export const footerContact = {
     address: {
         text: 'SHUKAN BATHWARE, Khokhara Hanuman Road, Opp. Monolith Surface LLP., Morbi 363 642,Gujarat (India)',
-        link: ''
+        link: `https://maps.app.goo.gl/r3wbicMnZfuigiTo8`
     },
     mobile1: {
         text: 'Customer Care : +91 9662788188',

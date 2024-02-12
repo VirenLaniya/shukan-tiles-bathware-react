@@ -44,7 +44,8 @@ const SearchResult = ({ searchText, toggleSearchDrawer }) => {
                 filteredProducts.length > 0 ?
                     <ImageList sx={{ width: '100%', "::-webkit-scrollbar": { display: 'none' } }} cols={matchDownMd ? 2 : 3} gap={matchDownMd ? 8 : 24}>
                         {filteredProducts.map((product) => (
-                            <Link key={product.id} to={`/collection/product/${product.id}`} underline='none' sx={{ width: '100%' }}>
+                            // <Link key={product.id} to={`/collection/product/${product.id}`} underline='none' sx={{ width: '100%' }}>
+                            <Box sx={{ width: '100%' }}>
                                 <ImageListItem key={product.name} sx={{
                                     width: '100%',
                                     textAlign: 'center',
@@ -87,7 +88,8 @@ const SearchResult = ({ searchText, toggleSearchDrawer }) => {
                                         }}
                                     />
                                 </ImageListItem>
-                            </Link>
+                            </Box>
+                            // </Link>
                         ))}
                     </ImageList>
                     :

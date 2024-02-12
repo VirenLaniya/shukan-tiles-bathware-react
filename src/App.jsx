@@ -17,6 +17,7 @@ import Hero from "./components/pages/Hero";
 import About from "./components/pages/About";
 import Product from "./components/pages/Product";
 import Contact from "./components/pages/Contact";
+import PageNotFound from "./components/pages/PageNotFound";
 //#endregion
 import Collection from "./components/pages/Collection";
 
@@ -29,12 +30,13 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
+    errorElement: <PageNotFound />,
     children: [
       { path: "/", element: <Hero /> },
-      { path: "/about", element: <About />},
-      { path: "/collection", element: <Collection />},
-      { path: "/contact", element: <Contact />},
-      { path: "/collection/product/:id", element: <Product />}
+      { path: "/about", element: <About /> },
+      { path: "/collection", element: <Collection /> },
+      { path: "/contact", element: <Contact /> },
+      // { path: "/collection/product/:id", element: <Product />}
     ]
   }
 ]);

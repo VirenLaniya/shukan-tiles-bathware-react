@@ -32,6 +32,18 @@ const CustomLink = styled(Link)(({ theme }) => ({
         color: theme.palette.primary.main
     }
 }));
+
+const CustomBox = styled(Box)(({ theme }) => ({
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    width: '100%',
+    textDecoration: 'none',
+    color: theme.palette.grey[600],
+    ':hover': {
+        color: theme.palette.primary.main
+    }
+}));
 //#endregion
 
 const NotFound = () => {
@@ -58,7 +70,8 @@ const ProductsContainer = ({ collectionId, filter }) => {
                 filteredProducts.length > 0 ?
                     <ImageList sx={{ width: '100%', "::-webkit-scrollbar": { display: 'none' } }} cols={matchDownMd ? 2 : 3} gap={matchDownMd ? 8 : 24}>
                         {filteredProducts.map((product) => (
-                            <CustomLink to={`/collection/product/${product.id}`} key={product.id}>
+                            // <CustomLink to={`/collection/product/${product.id}`} key={product.id}>
+                            <CustomBox>
                                 <ImageListItem key={product.name} sx={{
                                     width: '100%',
                                     textAlign: 'center',
@@ -99,7 +112,8 @@ const ProductsContainer = ({ collectionId, filter }) => {
                                         }}
                                     />
                                 </ImageListItem>
-                            </CustomLink>
+                            </CustomBox>
+                            // </CustomLink>
                         ))}
                     </ImageList>
                     :

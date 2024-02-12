@@ -1,5 +1,6 @@
 import logo from '/assets/common/company-logo.jpg'
 import logo2 from '/assets/common/company-logo-2.jpg'
+import pageNotFound404 from '/assets/common/404.svg'
 
 //#region Pages
 import { collections } from './products'
@@ -118,5 +119,14 @@ export const footerCopyright = {
 //#region Search
 export const search = {
     notFoundMsg: 'No Product Found!'
+}
+//#endregion
+
+//#region 404 Page not found
+export const pageNotFound = {
+    image: pageNotFound404,
+    title: 'Page not found',
+    linkText: 'Go to Home',
+    link: '/'
 }
 //#endregion

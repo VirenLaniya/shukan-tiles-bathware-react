@@ -71,8 +71,8 @@ const ProductsContainer = ({ collectionId, filter }) => {
                     <ImageList sx={{ width: '100%', "::-webkit-scrollbar": { display: 'none' } }} cols={matchDownMd ? 2 : 3} gap={matchDownMd ? 8 : 24}>
                         {filteredProducts.map((product) => (
                             // <CustomLink to={`/collection/product/${product.id}`} key={product.id}>
-                            <CustomBox>
-                                <ImageListItem key={product.name} sx={{
+                            <CustomBox key={product.id}>
+                                <ImageListItem key={product.id} sx={{
                                     width: '100%',
                                     textAlign: 'center',
                                     '&:hover .productItemBar': {
@@ -87,11 +87,12 @@ const ProductsContainer = ({ collectionId, filter }) => {
                                         loading="lazy"
                                         style={{
                                             width: '100%',
-                                            height: matchDownMd ? '160px' : '192px',
+                                            height: matchDownMd ? '160px' : '252px',
                                             objectFit: 'cover'
                                         }}
                                     />
-                                    <ImageListItemBar
+                                    {/* Uncomment below code if you want to Display Item name */}
+                                    {/* <ImageListItemBar
                                         className='productItemBar'
                                         title={product.name}
                                         position="below"
@@ -110,7 +111,7 @@ const ProductsContainer = ({ collectionId, filter }) => {
                                             boxShadow: `rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;`,
                                             transition: 'all 0.4s ease'
                                         }}
-                                    />
+                                    /> */}
                                 </ImageListItem>
                             </CustomBox>
                             // </CustomLink>

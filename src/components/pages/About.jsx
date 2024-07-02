@@ -9,6 +9,7 @@ import GroupOfCompanies from '../modules/about/GroupOfCompanies'
 import MadeInIndia from '../modules/about/MadeInIndia'
 import MissionVision from '../modules/about/MissionVision'
 import Message from '../modules/about/Message'
+import Team from '../modules/about/Team'
 
 const About = () => {
 
@@ -25,7 +26,8 @@ const About = () => {
       <GroupOfCompanies />
       <Fundamentals />
       <MissionVision />
-      <Message />
+      {/* <Message /> */}
+      <Team />
       <MadeInIndia />
     </Box>
   )

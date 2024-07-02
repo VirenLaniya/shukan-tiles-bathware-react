@@ -17,6 +17,15 @@ import tilescapeSurfaces from '/assets/images/about/companies/tilescape-surfaces
 import sezVitrified from '/assets/images/about/companies/sez-vitrified.png'
 //#endregion
 
+//#region Team Imports
+import accountingManagerImg from '/assets/images/about/team/Accounting manager.png'
+import businessDevelopmentSpecialist from '/assets/images/about/team/BUSINESS DEVELOPMENT SPECIALIST.png'
+import creativeDirectorOfSales from '/assets/images/about/team/Creative Director of Sales.png'
+import designDeveloper from '/assets/images/about/team/Design Developer.png'
+import directorOfPurchasing from '/assets/images/about/team/Director of Purchasing.png'
+import productionHead from '/assets/images/about/team/Production Head.png'
+//#endregion
+
 export const pageStarter = {
     title: 'About',
     background: background
@@ -49,7 +58,7 @@ export const groupOfCompanies = {
     companies: [
         { title: 'Shukan ceramic', image: shukanCeramic, link: 'https://www.shukanceramic.com/' },
         { title: 'Tilescape surfaces', image: tilescapeSurfaces, link: 'https://tilescape.in/' },
-        // { title: 'Sez vitrified', image: sezVitrified, link: '#' }
+        { title: 'Sez vitrified', image: sezVitrified, link: 'https://www.sezvitrified.com/' }
     ]
 }
 
@@ -71,6 +80,18 @@ export const message = {
     managingDirectorAbout: 'Managing Director',
     quoteMessage: 'We sculpt more than ceramics; we shape moments of luxury, blending timeless design with a commitment to a greener, more indulgent bathing experience.',
     message: "Dear Valued Customers, Partners, and Friends,\n\nIt is with immense pleasure and pride that I extend a warm welcome to you on behalf of Shukan. As the Chairman of this esteemed company, I am honored to be a part of a legacy that revolves around redefining the art of bathing.\nAt Shukan, we believe that a bathroom is more than just a functional space; it is a sanctuary for relaxation and rejuvenation. Our commitment to seamlessly blending timeless elegance, superior craftsmanship, and sustainable practices reflects our dedication to enhancing your everyday experiences.\nIn each piece of ceramic bathware, you'll find the embodiment of our passion for excellence. Our artisans, with their skillful hands, infuse a sense of authenticity and uniqueness into every creation. We take pride in not only crafting beautiful and enduring products but also in doing so with a profound respect for our environment.\nAs we embark on this journey, we invite you to explore the world of Shukan – a world where aesthetics meet ethics, and every detail is a testament to our commitment to quality and sustainability. Thank you for choosing Shukan, where your indulgence and well-being are at the heart of what we do.\n\nWarm regards,\n\nSarvesh Kundariya\nChairman, Shukan"
+}
+
+export const team = {
+    title: 'Meet our Team',
+    team: [
+        { name: "Sarvesh Kundariya", designation: "Creative Director of Sales", image: creativeDirectorOfSales },
+        { name: "Avinash Dava", designation: "Accounting manager", image: accountingManagerImg },
+        { name: "Kanad Kundariya", designation: "Business Development Director", image: businessDevelopmentSpecialist },
+        { name: "Divyesh Detroja", designation: "Design Developer", image: designDeveloper },
+        { name: "Dharmesh Detroja", designation: "Director of Purchasing", image: directorOfPurchasing },
+        { name: "Jayesh Detroja", designation: "Production Head", image: productionHead },
+    ]
 }
 
 export const madeInIndia = {
